@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">     
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/home.css">
+        <link rel="stylesheet" href="/css/stylesHeader.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+
+        
+    </head>
+    <body>
+        <%- include("./partials/header")  %> 
+        <main>
+            <img class ="Banner" src="images/gato.jpg" alt="Banner">
+            <section class="section-articulos">
+                <h3 class="Titulares">THE NFT MARKET</h3>   
+                <% products.forEach(producto=> { %>
+                    <section class = "sub-section-articulos">
+                        <article>
+                                <a href = "/detalle/<%= producto.id %>"><img class ="Imagen-articulo" src="img/<%= producto.imagen %>" alt="Alien"></a>
+                                <section class = "descripcionProducto">
+                                    <div class = "envioCamion">
+                                      <i class="fa-solid fa-shuttle-space"></i>
+                                    </div>
+                                    <div class="descripcionTotalProducto"> <!-- este div contenedor
+                                    permit asignle un flex row y poder dejar un espacio debajo de
+                                    h3 descripciones tal como pedía el ejercicio de la clase 14 -->
+                                        <div class = "precioDescuento">
+                                            <p class="Precios"><%= producto.precioActual %> ETH</p>
+                                            <p class="Descuentos"><%= producto.descuento %> OFF%</p>
+                                        </div>
+                                        <h3 class="Descripciones"><%= producto.descripcion %></h3>
+                                        <form action="/producto/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex ;margin-top: 2px;">
+                                            <button type="submit" class="btn btn-outline-danger btn-block">Eliminar</button>
+                                        </form>
+                                        <!-- <a href="/heroes/detail/delete/<%= producto.id %>" class="btn btn-outline-danger btn-block">Eliminar</a> -->
+                                    </div>
+                                </section>
+                            </article>
+                    </section>  
+                <div class="line-break"></div> 
+                <%}); %>
+                
+          </main>
+          
+
+          <%- include("./partials/footer")  %> 
+    
+                
+          
+        </body>
+          
+          

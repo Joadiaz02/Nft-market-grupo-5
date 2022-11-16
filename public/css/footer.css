@@ -1,0 +1,95 @@
+footer{
+    margin-top: 10rem;
+    width: 100%;
+}
+
+/* Parte Escritorio */
+
+.fondoNegro{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 16.438rem;
+    width: 100%;
+}
+
+.imgFooter{
+width: 12rem;
+}
+
+i{
+    color: white;
+}
+
+.cajaLogoIconos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 13rem;
+}
+
+.cajaLogoIconos ul{
+    display: flex;
+    flex-direction: row;
+    margin-left: -1.875rem;
+}
+
+.cajaLogoIconos ul li{
+    font-size: 1.3rem;
+    margin: 0.5rem;
+}
+
+.navegadores ul li a{
+    color:#FFFFFF;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.navegadores ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height: 2.4rem;
+}
+
+.navegadores ul{
+    height: 10.625rem;
+}
+
+.cajaMailDerechos p{
+    color: #8C8C94;
+    font-size: 0.781rem;
+    margin-top: 5.5rem;
+    text-align: end;
+}
+
+.footerButton{
+    background-color: #8B48BF;
+    color: #FFFFFF;
+    margin-top: 0.2rem;
+    margin-left: 0.7rem;
+    border: none;
+    border-radius: 3.125rem;
+    height: 2.625rem;
+    width: 3.938rem;
+}
+
+input{
+    border-radius: 3.125rem;
+    height: 2.75rem;
+    width: 12.563rem;
+    border: none;
+    text-indent: 0.625rem;
+}
+
+/* Parte Celular */
+
+.fondoNegroCelular{
+    display: none;
+}
+/*--------------*/
+/*--------------*//*Termina el footer*/
+

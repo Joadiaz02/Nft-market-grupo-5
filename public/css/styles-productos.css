@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap');
+
+*{
+    margin: 0rem;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+
+/*--------------*/
+/*--------------*//*--Animaciones--*/
+/*--------------*/
+
+header ul li a:hover{
+    color:#8B48BF;
+    cursor: pointer;
+}
+
+.navegadores ul li a:hover{
+    color: #8B48BF;
+    cursor: pointer;
+}
+
+i:hover{
+    color:#8B48BF;
+    cursor: pointer;
+}
+
+input:focus{
+    color:#8B48BF;
+}
+
+.button:hover{
+    cursor: pointer;
+    opacity: 50%;
+}
+
+.footerButton:hover{
+    cursor: pointer;
+    opacity: 80%;
+}
+
+.button-div:hover{
+    cursor: pointer;
+    opacity: 40%;
+}
+
+/*--------------*/
+/*--------------*//*Terminan las animaciones*/
+
+
+body{
+    width: 100%;
+}
+
+/*--------------*/
+/*--------------*//*----Header----*/
+/*--------------*/
+
+.img-logo{
+    width: 15%;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3.125rem;
+}
+
+header ul{
+    display: flex;
+}
+
+header ul li{
+    margin: 1rem;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #242E52;
+}
+
+.button{
+    background-color: #8B48BF;
+    color: #FFFFFF;
+    width: 8.375rem;
+    height: 2.75rem;
+    border-radius: 3.125rem;
+    border: none;
+    font-weight: 500;
+    box-shadow: 0rem 0.25rem 0.5rem rgb(139 72 191 / 50%);
+}
+
+/* Header parte para celular */
+
+.menuCelular{
+    display: none;
+}
+/*--------------*/
+/*--------------*//*Termina el header*/
+
+
+/*--------------*/
+/*-----Main-----*/
+/*--------------*/
+
+main{
+    width: 100%;
+}
+
+/*--------------*/
+/* Primera Seccion */
+    
+.section1{
+    display: flex;
+    width: auto;
+}
+
+.section1-div1{
+    width: 50%;
+    margin: 5% 5% 5% 5%;
+    
+}
+
+.img-producto{
+width:75%;
+margin-left: auto;
+margin-right: auto;
+display: block;
+}
+
+.section1-div2{
+    width: 50%;
+    margin: 5% 5% 5% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #1E1E26;
+}
+
+.titulo-producto{
+    font-weight: bold;
+    color:#1E1E26;
+    margin: 2% 2% 2% 2%;
+}
+
+.detalle{
+    color: #9b51e0;
+    margin: 2% 2% 2% 2%;
+}
+
+.detalle p{
+    font-size: 10px;
+    margin: 2% 2% 2% 2%;
+
+}
+
+.precio{
+    color: #ff6900;
+    margin: 2% 2% 2% 2%;
+}
+
+.top-venta{
+    color: #1E1E26;
+}
+
+.div-button-box{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    margin: 2% 2% 2% 2%;
+}
+
+.button-div{
+    background-color: #07BAE6;
+    color: #FFFFFF;
+    width: 8.375rem;
+    height: 2.75rem;
+    border-radius: 3.125rem;
+    border: none;
+    font-weight: 500;
+    box-shadow: 0rem 0.25rem 0.5rem rgb(139 72 191 / 50%);
+    margin: 2% 2% 2% 2%;
+}
+
+.descripcion{
+    margin: 5% 5% 5% 5%;
+    text-align: justify;
+    background-color: rgb(139 72 191 / 50%);;
+}
+
+/*--------------*/
+/*----Footer----*/
+/*--------------*/
+
+footer{
+    margin-top: 10rem;
+    width: 100%;
+}
+
+/* Parte Escritorio */
+
+.fondoNegro{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 15.438rem;
+}
+
+.imgFooter{
+width: 12rem;
+}
+
+i{
+    color: white;
+}
+
+.cajaLogoIconos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 13rem;
+}
+
+.cajaLogoIconos ul{
+    display: flex;
+    flex-direction: row;
+    margin-left: -1.875rem;
+}
+
+.cajaLogoIconos ul li{
+    font-size: 1.3rem;
+    margin: 0.5rem;
+}
+
+.navegadores ul li a{
+    color:#FFFFFF;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.navegadores ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height: 2.4rem;
+}
+
+.navegadores ul{
+    height: 10.625rem;
+}
+
+.cajaMailDerechos p{
+    color: #8C8C94;
+    font-size: 0.781rem;
+    margin-top: 5.5rem;
+    text-align: end;
+}
+
+.footerButton{
+    background-color: #8B48BF;
+    color: #FFFFFF;
+    margin-top: 0.2rem;
+    margin-left: 0.7rem;
+    border: none;
+    border-radius: 3.125rem;
+    height: 2.625rem;
+    width: 3.938rem;
+}
+
+input{
+    border-radius: 3.125rem;
+    height: 2.75rem;
+    width: 12.563rem;
+    border: none;
+    text-indent: 0.625rem;
+}
+
+/* Parte Celular */
+
+.fondoNegroCelular{
+    display: none;
+}
+/*--------------*/
+/*--------------*//*Termina el footer*/
+
+
+
+
+
+/*--------------*/
+/*Media Query*/
+@media(max-width: 500px){
+    
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /*--------------*/
+    /*----header----*/
+    /*--------------*/
+
+    header{
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    header ul{
+        display: none;
+    }
+
+    header button{
+        display: none;
+    }
+
+    .menuCelular{
+        display:inline;
+        font-size: 3.125rem;
+    }
+
+
+    /*--------------*/
+    /*----Footer----*/
+    /*--------------*/
+
+    footer{
+        margin-top: 5rem;
+    }
+
+    .fondoNegro{
+        display: none;
+    }
+
+    .fondoNegroCelular{
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .celularFormulario{
+        width: 90%;
+    }
+
+    .celularFormulario form{
+        display: flex;
+        justify-content: center;
+        margin-top: 2.813rem;
+    }
+
+    .fondoNegroCelular div form input{
+        width: 70%;
+    }
+
+    .navegadoresCelular{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 1.875rem;
+    }
+
+    .navegadoresCelular ul{
+        padding: 0px;
+    }
+
+    .iconosCelular{
+        width: 90%;
+    }
+
+    .iconosCelular ul{
+        display: flex;
+        font-size: 1.25rem;
+        margin-top: 1.875rem;
+        padding-left: 0rem;
+        width: 90%;
+        margin-right: 0rem;
+        margin-left: 5%;
+        justify-content: center;
+    }
+
+    .iconosCelular ul li{
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+
+    .fondoNegroCelular img{
+        margin-top: 2.813rem;
+    }
+
+    .fondoNegroCelular p{
+        margin-top: 2.813rem;
+        margin-bottom: 2.813rem;
+        color: #8C8C94;
+    }    
+
+    .logo-footer{
+        width: 50%;
+    }
+}

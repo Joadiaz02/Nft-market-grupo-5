@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NFT - login</title>
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/stylesLogin.css">
+        <link rel="stylesheet" href="/css/stylesHeader.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet"> 
+        <link rel="SHORTCUT ICON" href="/img/icono.png">
+    </head>
+<body>
+    
+    <div class="main">
+
+        <div class="logo-login">
+            <img class="logo-login" src="images/5.png" alt="Logo">
+        </div>
+        <h1>NFT</h1>
+
+    <form action="/login" method="POST" class="registro">
+        <div class="mail">
+            <i class="far fa-envelope"></i> 
+            <input type="email" placeholder="Email" required minlength="6"> 
+        </div>
+        <div class="pass">
+            <i class="fas fa-lock lock"></i>
+            <input type="password" placeholder="Contraseña" required>
+            <i class="far fa-eye-slash ver"></i>            
+        </div>
+
+
+        <button type="submit"><a href="/home">Ingresar</a></button>
+
+        <a href="#reset" class="forgot">¿Olvidaste tu contraseña?</a>
+
+    </form>
+</div>
+<script src="/js/index.js"></script>
+</body>
+<%- include("../partials/footer")  %> 
+</html>

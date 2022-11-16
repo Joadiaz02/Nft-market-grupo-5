@@ -1,0 +1,82 @@
+[
+ {
+  "id": 1,
+  "nombreProducto": "Greenlam",
+  "descripcion": "LLorem ipsum dolor sit amet consectetur adipisicing elit. Est, sed quasi magnam eveniet quia numquam possimus repudiandae rem molestias debitis, dolor, perspiciatis explicabo labore tenetur nostrum alias aliquam repellat dolorum.",
+  "imagen": "robot-nft.png",
+  "categoria": "In hac habitasse platea dictumst.",
+  "precioActual": "13.06",
+  "descuento": "40"
+ },
+ {
+  "id": 2,
+  "nombreProducto": "Cardify",
+  "descripcion": "LLorem ipsum dolor sit amet consectetur adipisicing elit. Est, sed quasi magnam eveniet quia numquam possimus repudiandae rem molestias debitis, dolor, perspiciatis explicabo labore tenetur nostrum alias aliquam repellat dolorum.",
+  "imagen": "droga-nft.png",
+  "categoria": "In hac habitasse platea dictumst.",
+  "precioActual": "1.08",
+  "descuento": "20"
+ },
+ {
+  "id": 3,
+  "nombreProducto": "Quo Lux",
+  "descripcion": "LLorem ipsum dolor sit amet consectetur adipisicing elit. Est, sed quasi magnam eveniet quia numquam possimus repudiandae rem molestias debitis, dolor, perspiciatis explicabo labore tenetur nostrum alias aliquam repellat dolorum.",
+  "imagen": "robot-nft.png",
+  "categoria": "Duis faucibus accumsan odio.",
+  "precioActual": "1.04",
+  "descuento": "35"
+ },
+ {
+  "id": "4",
+  "nombreProducto": "spiderman",
+  "descripcion": "el mejor",
+  "imagen": "1668349334126_user.png",
+  "categoria": "crack",
+  "precioActual": "22.11",
+  "descuento": "1"
+ },
+ {
+  "id": 6,
+  "nombreProducto": "Rank",
+  "descripcion": "LLorem ipsum dolor sit amet consectetur adipisicing elit. Est, sed quasi magnam eveniet quia numquam possimus repudiandae rem molestias debitis, dolor, perspiciatis explicabo labore tenetur nostrum alias aliquam repellat dolorum.",
+  "imagen": "vaca-nft.png",
+  "categoria": "Nullam molestie nibh in lectus.",
+  "precioActual": "4.26",
+  "descuento": "50"
+ },
+ {
+  "id": 7,
+  "nombreProducto": "Greenlam",
+  "descripcion": "LLorem ipsum dolor sit amet consectetur adipisicing elit. Est, sed quasi magnam eveniet quia numquam possimus repudiandae rem molestias debitis, dolor, perspiciatis explicabo labore tenetur nostrum alias aliquam repellat dolorum.",
+  "imagen": "droga-nft.png",
+  "categoria": "In hac habitasse platea dictumst.",
+  "precioActual": "0.85",
+  "descuento": "20"
+ },
+ {
+  "id": 8,
+  "nombreProducto": "Greenlam",
+  "descripcion": "LLorem ipsum dolor sit amet consectetur adipisicing elit. Est, sed quasi magnam eveniet quia numquam possimus repudiandae rem molestias debitis, dolor, perspiciatis explicabo labore tenetur nostrum alias aliquam repellat dolorum.",
+  "imagen": "nafta-nft.png",
+  "categoria": "In hac habitasse platea dictumst.",
+  "precioActual": "0.85",
+  "descuento": "25"
+ },
+ {
+  "id": 9,
+  "nombreProducto": "hola3",
+  "descripcion": "hola3",
+  "imagen": "1667791734225_user.png",
+  "precioActual": "3",
+  "descuento": "3"
+ },
+ {
+  "id": 10,
+  "nombreProducto": "1",
+  "descripcion": "1",
+  "imagen": "1668565705792_user.png",
+  "categoria": "1",
+  "precioActual": "1",
+  "descuento": "1"
+ }
+]

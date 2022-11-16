@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="/css/stylesHeader.css">
+    <link rel="stylesheet" href="/css/styleEditar.css">
+    <link rel="stylesheet" href="/css/stylesHeader.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+    <link rel="SHORTCUT ICON" href="/img/icono.png">
+</head>
+
+
+    <body>
+        <main>
+        <div class="main2">
+            <div class="logo" id="logo">
+                <img src="/images/5.png" alt="logo comercial">
+            </div>
+            <h4>Crear producto</h4>
+
+            <form action="/producto/detalle" method="POST" class="form" enctype="multipart/form-data">
+
+                <div class="categoria">
+                    <label for="categoria">Nombre Producto</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                </div>
+                <div class="categoria">
+                    <label for="categoria">Descripcion</label>
+                    <input type="textarea" id="descripcion" name="descripcion" placeholder="Descripcion">
+                </div>
+                <div class="botones">
+                    <label>Imagen</label>
+                    <input type="file" id="filename" name="filename">
+                </div>
+                <div class="categoria">
+                    <label for="categoria">Categoria</label>
+                    <input type="text" id="categoria" name="categoria">
+                </div>
+                <div class="categoria">
+                    <label for="categoria">Precio Actual</label>
+                    <input type="number" id="precioActual" name="precioActual">
+                </div>
+                <div class="categoria">
+                    <label for="categoria">Descuento</label>
+                    <input type="number" id="descuento" name="descuento">
+                </div>
+
+
+
+                <div class="passR">
+
+
+
+                    <div class="botones">
+                        <button type="submit">Cargar Producto</button>
+                        <button class="modificar-boton" type="submit"><a href="/">Refrescar Formulario</a></button>
+
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+        <%- include("../partials/footer") %>
+
+
+           
+    </body>
+
+</html>

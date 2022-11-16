@@ -1,0 +1,569 @@
+body{
+  margin: 0px ;
+  padding: 0px ;
+  box-sizing: border-box ;
+}
+
+header{
+    
+background-color:#A569BD ; 
+  height: 13vh;
+}
+
+
+
+.lateral-header{
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+}
+
+.Logo{
+width: 26%;
+height: 12vh;
+box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
+padding: 3px;
+}
+
+
+.caja-flex-mobile{
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+
+}
+
+.burger-menu-mobile{
+display: block;
+color: white
+}
+
+.search {
+display: flex;
+justify-content: center;
+
+
+}
+
+.searchTerm {
+width: 70%;
+border: 3px solid #00B4CC;
+border-right: none;
+padding: 5px;
+height: 20px;
+border-radius: 5px 0 0 5px;
+outline: none;
+color: #9DBFAF;
+}
+
+.searchTerm:focus{
+color: #00B4CC;
+}
+
+/* .searchButton {
+width: 40px;
+height: 36px;
+border: 1px solid #00B4CC;
+background: #00B4CC;
+text-align: center;
+color: #fff;
+border-radius: 0 5px 5px 0;
+cursor: pointer;
+font-size: 20px;
+} */
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+width: 30%;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.nft-barra-busqueda{
+ display:none;
+}
+
+.nft-p-header{
+font-weight: bold;  
+}
+
+/*.lateral-header{
+display: flex;
+align-items: center;
+gap: 12%;
+
+
+}*/
+
+.barra-busqueda-icono{
+width: 30%;
+display: flex;
+align-items: center;
+}
+
+
+.navbar{
+display: none;
+}
+
+
+.primera-lista-mobile{
+display: flex;
+list-style: none;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+width: 100%;
+gap: 10%;
+
+}
+
+
+
+.opciones-lista{
+text-decoration: none;
+color: white;
+}
+
+
+.segunda-lista, .tercer-lista{
+display: none;
+}
+/*
+.primera-lista{
+display: flex;
+gap:4vh;
+}*/
+
+.navbar-mobile ul li a{
+text-decoration: none;
+color: white;
+width: 10%;
+
+}
+
+.searchButton {
+  width: 34px;
+  height: 20px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+
+.version-escritorio-normal-Marketplace{
+  display: none;
+}
+
+/******** TABLET HORIZONTAL Y ESCRITORIOS NORMALES **************/
+
+@media(min-width: 768px){
+
+  .version-escritorio-normal-Marketplace{
+    display: none;
+  }
+
+header{
+  height: 17vh;
+}
+
+.burger-menu-mobile{
+  display: block;
+  color: white
+}
+
+.Logo{
+    width: 20%;
+    height: 16vh;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
+    padding: 3px;
+}
+
+.version-escritorio-normal-Marketplace{
+  display: none;
+}
+
+.lateral-mobile{
+  display:none;
+}
+
+.search {
+    width: 25vmax; /*100*/
+    position: relative;
+    display: flex;
+    margin-left: 3%;  
+  
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color: #00B4CC;
+  }
+  
+  .searchButton {
+    width: 34px;
+    height: 20px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  /*Resize the wrap to see the search bar change!*/
+  .wrap{
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.nft-barra-busqueda{
+    display: flex;
+    align-items: center;
+    margin-left: 4%;
+}
+
+.nft-p-header{
+    font-weight: bold;  
+}
+
+/*.lateral-header{
+    display: flex;
+    align-items: center;
+    gap: 12%;
+
+    
+}*/
+
+.barra-busqueda-icono{
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+
+
+.navbar{
+    display: flex;
+    gap: 4vh;
+    margin-left: 1.7%;
+    align-items: center;
+    
+}
+
+
+.segunda-lista, .tercer-lista{
+    display: flex;
+    list-style: none;
+    gap: 4vh;
+}
+
+.primera-lista{
+    display: none;
+}
+
+.burger-menu{
+  display: block;
+  color: white;
+  margin-left: 10%;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    width: 10%;
+
+}
+
+.nft-barra-busqueda-mobile{
+  display: none;
+}
+
+.caja-flex-mobile{
+  display: none;   
+}
+
+}
+
+
+
+/******** TABLET HORIZONTAL Y ESCRITORIOS NORMALES **************/
+
+@media(min-width: 1024px){
+
+header{
+  height: 17vh;
+}
+
+
+.Logo{
+    width: 16%;
+    height: 16vh;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
+    padding: 3px;
+}
+
+
+.lateral-mobile{
+  display:none;
+}
+
+.search {
+    width: 25vmax; /*100*/
+    position: relative;
+    display: flex;
+    margin-left: 3%;  
+   
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 5px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color: #00B4CC;
+  }
+
+  .searchButton {
+    width: 34px;
+    height: 20px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  /*Resize the wrap to see the search bar change!*/
+  .wrap{
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.nft-barra-busqueda{
+    display: flex;
+    align-items: center;
+    margin-left: 4%;
+}
+
+.nft-p-header{
+    font-weight: bold;  
+}
+
+/*.lateral-header{
+    display: flex;
+    align-items: center;
+    gap: 12%;
+
+    
+}*/
+
+.barra-busqueda-icono{
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+
+
+.navbar{
+    display: flex;
+    gap: 4vh;
+    margin-left: 1.7%;
+    align-items: center;
+    
+}
+
+
+.segunda-lista, .tercer-lista, .version-escritorio-normal-Marketplace{
+    display: flex;
+    list-style: none;
+    gap: 4vh;
+}
+
+.primera-lista{
+    display: none;
+}
+
+.burger-menu{
+  display: block;
+  color: white;
+  margin-left: 10%;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    width: 10%;
+
+}
+
+
+.nft-barra-busqueda-mobile{
+  display: none;
+}
+
+.caja-flex-mobile{
+  display: none;   
+}
+
+}
+
+
+
+/******** ESCRITORIOS MUY ANCHOS **************/
+
+
+@media(min-width: 1200px){
+
+.caja-flex-mobile{
+  display: none;   
+}
+
+.Logo{
+  width: 13%;
+  height: 16vh;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
+  padding: 3px;
+}
+
+
+.nft-barra-busqueda-mobile{
+display: none;
+}
+
+.lateral-mobile{
+display:none;
+}
+
+.search {
+  width: 22vmax; /*100*/
+  position: relative;
+  display: flex;
+  margin-left: 3%;  
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+  .searchButton {
+    width: 34px;
+    height: 20px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nft-barra-busqueda{
+  display: flex;
+  align-items: center;
+  margin-left: 4%;
+}
+
+.nft-p-header{
+  font-weight: bold;  
+}
+
+/*.lateral-header{
+  display: flex;
+  align-items: center;
+  gap: 12%;
+
+  
+}*/
+
+.barra-busqueda-icono{
+width: 30%;
+display: flex;
+align-items: center;
+}
+
+
+.navbar{
+  display: flex;
+  gap: 4vh;
+  margin-left: 1.7%;
+  align-items: center;
+  
+}
+
+
+.primera-lista, .segunda-lista, .tercer-lista{
+  display: flex;
+  list-style: none;
+  gap: 4vh;
+}
+/*
+.primera-lista{
+  display: flex;
+  gap:4vh;
+}*/
+
+.navbar ul li a{
+  text-decoration: none;
+  color: white;
+  width: 10%;
+
+}
+
+.burger-menu{
+display: none;
+}
+.version-escritorio-normal-Marketplace{
+  display: none;
+}
+}
