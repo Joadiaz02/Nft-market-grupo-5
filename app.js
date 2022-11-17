@@ -17,14 +17,14 @@ app.use(methodOverride('_method')); // Para poder pisar el method="POST" en el f
 
 // ************ Template Engine ************
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '/views'));
+app.set('views', path.join(__dirname, '/src/views'));
 
 
 // ************ Sistema de Rutas ************
-const rutasHome = require('./routers/rutaHome.js');
-const rutasProducto = require('./routers/rutaProducto.js');
-const rutasCarrito = require('./routers/rutaCarrito.js');
-const rutasUsuario = require('./routers/rutaUsuario.js');
+const rutasHome = require('./src/routers/rutaHome.js');
+const rutasProducto = require('./src//routers/rutaProducto.js');
+const rutasCarrito = require('./src//routers/rutaCarrito.js');
+const rutasUsuario = require('./src//routers/rutaUsuario.js');
 
 app.use('/', rutasHome);
 app.use('/producto', rutasProducto);
