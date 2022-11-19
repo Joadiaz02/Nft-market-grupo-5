@@ -28,7 +28,7 @@ const rutasUsuario = require('./src//routers/rutaUsuario.js');
 const rutasError = require('./src//routers/rutaError404.js')
 
 app.use('/', rutasHome);
-app.use('/producto', rutasProducto);
+app.use('/productos', rutasProducto);
 app.use('/usuario', rutasUsuario);
 app.use('/carrito', rutasCarrito);
 app.use('/error', rutasError);

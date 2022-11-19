@@ -27,15 +27,6 @@
   "descuento": "35"
  },
  {
-  "id": "4",
-  "nombreProducto": "spiderman",
-  "descripcion": "el mejor",
-  "imagen": "1668349334126_user.png",
-  "categoria": "crack",
-  "precioActual": "22.11",
-  "descuento": "1"
- },
- {
   "id": 6,
   "nombreProducto": "Rank",
   "descripcion": "LLorem ipsum dolor sit amet consectetur adipisicing elit. Est, sed quasi magnam eveniet quia numquam possimus repudiandae rem molestias debitis, dolor, perspiciatis explicabo labore tenetur nostrum alias aliquam repellat dolorum.",

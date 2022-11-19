@@ -17,13 +17,13 @@
     <body>
         <%- include("./partials/header")  %> 
         <main>
-            <img class ="Banner" src="images/gato.jpg" alt="Banner">
+            <img class ="Banner" src="/images/gato.jpg" alt="Banner">
             <section class="section-articulos">
                 <h3 class="Titulares">THE NFT MARKET</h3>   
                 <% products.forEach(producto=> { %>
                     <section class = "sub-section-articulos">
                         <article>
-                                <a href = "/detalle/<%= producto.id %>"><img class ="Imagen-articulo" src="images/<%= producto.imagen %>" alt="Alien"></a>
+                                <a href = "/detalle/<%= producto.id %>"><img class ="Imagen-articulo" src="/images/<%= producto.imagen %>" alt="Alien"></a>
                                 <section class = "descripcionProducto">
                                     <div class = "envioCamion">
                                       <i class="fa-solid fa-shuttle-space"></i>

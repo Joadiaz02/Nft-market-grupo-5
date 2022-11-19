@@ -5,14 +5,13 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+
+
 const productsControllers = {
-    //index: (req, res) => {
-       // products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-       // res.render('../views/home', {
-         //   products
-       // })
-       // res.render('todos los productos'); // a confirmar
-   // },
+    index: (req, res) =>{
+        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('home', {products});
+    },
     crear: (req, res) => {
         res.render('../views/productos/crearProducto');
     },

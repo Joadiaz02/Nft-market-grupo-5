@@ -8,7 +8,7 @@ const uploadFile = require('../middlewares/multerMiddleware');
 
 
 // Productos Home
-router.get('/', homeController.index);
+router.get('/', productoController.index);
 
 
 // Crear Productos
