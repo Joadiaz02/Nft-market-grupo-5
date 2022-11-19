@@ -76,7 +76,9 @@ const productsControllers = {
     },
 
     detalleProducto: (req, res) => {
-        res.render('../views/productos/producto');
+        const id = req.params.id;
+        const producto = products.find(producto => producto.id == id);
+        res.render('../views/productos/producto', {producto});
     }
 }
 

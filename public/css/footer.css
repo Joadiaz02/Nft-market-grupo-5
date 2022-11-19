@@ -3,7 +3,9 @@ footer{
     width: 100%;
 }
 
+
 /* Parte Escritorio */
+
 
 .fondoNegro{
     background-color: black;
@@ -36,6 +38,7 @@ i{
     flex-direction: row;
     margin-left: -1.875rem;
 }
+
 
 .cajaLogoIconos ul li{
     font-size: 1.3rem;

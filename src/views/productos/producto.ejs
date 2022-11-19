@@ -15,19 +15,19 @@
     <main>
         <section class="section1">
             <div class="section1-div1">
-                <img src="images/lebron.png" alt="imagen producto" class="img-producto">
+                <img class="img-producto" src="/images/<%= producto.imagen %>" alt="imagen producto">
             </div>
             <div class="section1-div2">
                 
 
                 <div class="detalle">
-                    <h1 class="titulo-producto"> Lebron James</h1>
-                    <p>Vendido por 30 coleccionistas</p>
+                    <h1 class="titulo-producto"> <%= producto.nombreProducto %></h1>
+                    <p>Categoría:  <%= producto.categoria %></p>
                 </div>
 
                 <div class="precio">
-                    <p class="top-venta"> Mayor venta : 3000USD</p>
-                    <p> Precio actual: 1500 USD</p>
+                    <p class="top-venta"> Mayor venta : <%= producto.precioActual %> USD</p>
+                    <p> Descuento:  <%= producto.descuento %> %</p>
                 </div>
 
                 <div class="div-button-box">
@@ -40,10 +40,7 @@
 
         <section class="descripcion">
             <p>
-                A lo largo de su ilustre carrera de 19 años, la superestrella de Los Angeles Lakers, LeBron James, nunca ha huido a un momento clave, ya sea que esté haciendo una jugada para sí mismo o para uno de sus compañeros de equipo. 
-                Él toma el destino de los Lakers en sus propias manos con un confiado triple desde el centro de la ciudad seguido de su característica celebración "Silencer" para calmar a la multitud al final del último cuarto. 
-                El gran tiro de James fue parte de un monstruoso esfuerzo de 39 puntos en una victoria en tiempo extra por 124-116 sobre los Indiana Pacers el 24 de noviembre de 2021.
-            </p>
+                <%= producto.descripcion %>
         </section>
 
 

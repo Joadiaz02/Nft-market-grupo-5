@@ -11,6 +11,9 @@ background-color:#A569BD ;
 }
 
 
+.headerProducto{
+  margin-top: 0;
+}
 
 .lateral-header{
   display: flex;

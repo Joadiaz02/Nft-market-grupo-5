@@ -25,11 +25,14 @@ const rutasHome = require('./src/routers/rutaHome.js');
 const rutasProducto = require('./src//routers/rutaProducto.js');
 const rutasCarrito = require('./src//routers/rutaCarrito.js');
 const rutasUsuario = require('./src//routers/rutaUsuario.js');
+const rutasError = require('./src//routers/rutaError404.js')
 
 app.use('/', rutasHome);
 app.use('/producto', rutasProducto);
 app.use('/usuario', rutasUsuario);
 app.use('/carrito', rutasCarrito);
+app.use('/error', rutasError);
+
 
 
 
