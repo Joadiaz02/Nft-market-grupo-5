@@ -1,5 +1,5 @@
 body{
-    background-color: #333;
+    background-color: rgb(100, 7, 221);
     margin: 0;
     display: flex;
     align-items: center;
@@ -7,7 +7,7 @@ body{
     flex-direction: column;
     min-height: 100vh;
     font-family: sans-serif;
-    color: #aaaa
+    color: rgba(146, 3, 110, 0.667)
 }
 
 h1{
@@ -21,6 +21,6 @@ p{
 }
 
 a{
-    color: #888;
+    color: rgb(228, 173, 211);
     font-size: 2rem;
 }
