@@ -10,7 +10,7 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const productsControllers = {
     index: (req, res) =>{
         products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render('home', {products});
+        res.render('../views/productos/productos', {products});
     },
     crear: (req, res) => {
         res.render('../views/productos/crearProducto');
@@ -77,7 +77,7 @@ const productsControllers = {
     detalleProducto: (req, res) => {
         const id = req.params.id;
         const producto = products.find(producto => producto.id == id);
-        res.render('../views/productos/producto', {producto});
+        res.render('../views/productos/productoDetalle', {producto});
     }
 }
 

@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap');
 
+
+
 *{
     margin: 0rem;
     font-family: 'Be Vietnam Pro', sans-serif;
 }
 
+
+img{
+    pointer-events: none;
+}
 
 /*--------------*/
 /*--------------*//*--Animaciones--*/
@@ -57,7 +63,7 @@ body{
 /*--------------*/
 
 .img-logo{
-    width: 15%;
+    width: 10%;
 }
 
 header{
@@ -69,16 +75,47 @@ header{
 
 header ul{
     display: flex;
+    
 }
 
 header ul li{
-    margin: 1rem;
+
+    margin: 2rem;
+    justify-content: space-between;
+
+}
+
+header .botonesIncioRegistro{
+    display: flex;
+}
+
+header .botonesIncioRegistro button{
+    margin: 1.6rem;
+   
 }
 
 header ul li a{
+    color: #fff;
     text-decoration: none;
-    color: #242E52;
+    border-radius: 20px;
+    padding: 6px 15px;
 }
+
+
+header ul li a.active
+{
+    background: #fff;
+    color: #2b1055
+
+}
+
+header ul li a:hover
+{
+    background: #fff;
+    color: #2b1055
+
+}
+
 
 .button{
     background-color: #8B48BF;

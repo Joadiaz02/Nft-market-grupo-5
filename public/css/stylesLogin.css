@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+img{
+    pointer-events: none;
+}
+
 body {
     background-image: url(/images/fondoLogin.jpg);
     background-repeat: no-repeat;
