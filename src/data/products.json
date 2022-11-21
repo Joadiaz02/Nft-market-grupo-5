@@ -60,14 +60,5 @@
   "imagen": "1667791734225_user.png",
   "precioActual": "3",
   "descuento": "3"
- },
- {
-  "id": 10,
-  "nombreProducto": "1",
-  "descripcion": "1",
-  "imagen": "1668565705792_user.png",
-  "categoria": "1",
-  "precioActual": "1",
-  "descuento": "1"
  }
 ]
