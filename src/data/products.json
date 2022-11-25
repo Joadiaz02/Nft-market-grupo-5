@@ -60,5 +60,23 @@
   "imagen": "1667791734225_user.png",
   "precioActual": "3",
   "descuento": "3"
+ },
+ {
+  "id": 11,
+  "nombreProducto": "Astronauta",
+  "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stand",
+  "imagen": "1669173260615_user.png",
+  "categoria": "Monedas",
+  "precioActual": "56",
+  "descuento": "10"
+ },
+ {
+  "id": 12,
+  "nombreProducto": "1",
+  "descripcion": "1",
+  "imagen": "1669173361067_user.png",
+  "categoria": "1",
+  "precioActual": "1",
+  "descuento": "1"
  }
 ]

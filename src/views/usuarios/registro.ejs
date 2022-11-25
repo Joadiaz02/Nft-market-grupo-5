@@ -22,64 +22,123 @@
 
 
 <body>
-
+    
     <div class="main2">
         <div class="logo" id="logo-registro">
         <img src="/images/5.png" alt="logo comercial">
         </div>
-        <h4>Estás a un paso de ingresar a la comunidad</h4>
-
-        <form action="/register.html" method="POST" class="form">
+       
+        <h4>Estás a un paso de ingresar a la comunidad  </h4>
+        <form action="/usuario/detalle" method="POST" class="form" enctype="multipart/form-data">
 
             <div class="nombre">
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido" required minlength="2">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                <% if (locals.errors && errors.nombre) { %>
+                    <div class ="text-danger">
+                       <%= errors.nombre.msg %> 
+
+                    </div>
+                    <% } %>
+            </div>
+            <div class="apellido">
+                <input type="text" id="apellido" name="apellido" placeholder="Apellido">
+                <% if (locals.errors && errors.apellido) { %>
+                    <div class ="text-danger">
+                       <%= errors.apellido.msg %> 
+
+                    </div>
+                    <% } %>
             </div>
             <div class="user">
-                <input type="user" id="user" placeholder="Nombre de Usuario" name="user" required minlength="2">
+                <input type="usuario" id="usuario" placeholder="Nombre de Usuario" name="usuario">
+                <% if (locals.errors && errors.user) { %>
+                    <div class ="text-danger">
+                       <%= errors.user.msg %> 
+
+                    </div>
+                    <% } %>
             </div>
             <div class="mail-userProfile">
-                <input type="email" id="mail" placeholder="Correo Electrónico" name="mail" required minlength="2">
+                <input type="email" id="mail" placeholder="Correo Electrónico" name="mail">
+                <% if (locals.errors && errors.mail) { %>
+                    <div class ="text-danger">
+                       <%= errors.mail.msg %> 
+                   </div>
+                    <% } %>
             </div>   
             <div class="nacimiento">
                 <label for="nacimiento">Fecha de Nacimiento</label>
-                <input type="date" id="nacimiento" name="nacimiento" required>
+                <input type="date" id="nacimiento" name="nacimiento">
+                <% if (locals.errors && errors.nacimiento) { %>
+                    <div class ="text-danger">
+                       <%= errors.nacimiento.msg %> 
+
+                    </div>
+                    <% } %>
             </div>
-            <div class="domicilio">
-                <input type="text" id="pais_residencia" placeholder="País de Residencia" name="pais_residencia">
-            </div>
+            <select name="pais_residencia" class="domicilio">
+                <option value="">Elegí país de residencia</option>
+                <% 
+                let paises = ['Argentina', 'Bolivia', 'Brasil', 'Colombia', 'Chile', 'Ecuador', 'Paraguay', 'Perú', 'Uruguay', 'Venezuela']
+                %>
+                <% for (const unPais of paises){ %>
+                    <option value="<%= unPais %>"> <%= unPais%> </option>
+                <% } %>
+                <% if (locals.errors && errors.pais_residencia) { %>
+                    <div class ="text-danger">
+                       <%= errors.pais_residencia.msg %> 
+
+                    </div>
+                    <% } %>
+            </select>
 
             <div class="intereses">
                 <h4>Intereses</h4>
                 <div class="checks">
-                    <input type="radio" name="deportes" value="deportes">
+                    <input type="radio" name="intereses" value="deportes">
                     <label for="deportes">Deportes</label>
                 </div>
                 <div class="checks">
-                    <input type="radio" name="metaverso" value="metaverso" >
+                    <input type="radio" name="intereses" value="metaverso" >
                     <label for="metaverso">Metaverso</label>
                 </div>
                 <div class="checks">
-                    <input type="radio" name="juegos" value="juegos">
+                    <input type="radio" name="intereses" value="juegos">
                     <label for="juegos">Juegos</label>
                 </div>    
                 <div class="checks">
-                    <input type="radio" name="investigacion" value="investigacion">
+                    <input type="radio" name="intereses" value="investigacion">
                     <label for="investigacion">Investigación</label>
                 </div>    
                 <div class="checks">
-                    <input type="radio" name="Mercados" value="Mercados">
+                    <input type="radio" name="intereses" value="Mercados">
                     <label for="Mercados">Mercados</label>
                 </div>
             </div>
 
             <div class="foto">
                 <label for="foto">Foto de Perfil</label>
-                <input type="file" id="foto" name="foto" accept=".jpg">
+                <input type="file" id="filename" name="filename">
             </div>
 
             <div class="passR">
-                <input type="password" id="pass" name="pass" required minlength="6" placeholder="Contraseña">
-                <input type="password" id="pass2" name="pass2" required minlength="6" placeholder="Confirmar Contraseña">
+                <input type="text" id="contrasena"  placeholder="Contraseña" name="contrasena">
+                <% if (locals.errors && errors.contrasena) { %>
+                    <div class ="text-danger">
+                       <%= errors.contrasena.msg %> 
+
+                    </div>
+                    <% } %>
+            </div>
+
+            <div class="passR">
+                <input type="text" id="confirmar_contrasena"  placeholder="Contraseña" name="confirmar_contrasena">
+                <% if (locals.errors && errors.confirmar_contrasena) { %>
+                    <div class ="text-danger">
+                       <%= errors.confirmar_contrasena.msg %> 
+
+                    </div>
+                    <% } %>
             </div>
 
             <div class="tarjeta">
@@ -87,7 +146,7 @@
             </div>
 
             <div class="botones">
-                <button type="submit"><a href="/">Enviar</a></button>
+                <button type="submit">Enviar</a></button>
                 <button type="reset" style="cursor: pointer;">Borrar</button>
             </div>
 
