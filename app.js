@@ -35,7 +35,6 @@ app.use('/error', rutasError);
 
 
 
-
 // ************ Creando servidor ************
 const PORT = process.env.PORT || 3000
 
@@ -45,9 +44,9 @@ app.listen(PORT, () => {
 
 
 //Pagina no encontrada
-app.use ( async (req, res, next) => {
-    res.status(404).render('error404');
-})
+//app.use ( async (req, res, next) => {
+  //  res.status(404).render('error404');
+//})
 
 // ************ Modulo Exportado ************
 module.exports = app;

@@ -14,7 +14,7 @@ const validations = [
     body('mail').notEmpty().withMessage('Tienes que escribir un correo electrónico'),
     body('nacimiento').notEmpty().withMessage('Tenes que indicar tu fecha de nacimiento'),
     body('pais_residencia').notEmpty().withMessage('Tienes elegir un país'),
-    body('contrasena').notEmpty().withMessage('Tienes colocar una contraseña'),
+    body('password').notEmpty().withMessage('Tienes colocar una contraseña'),
     body('confirmar_contrasena').notEmpty().withMessage('Tienes que confirmar la contraseña')
 ];
 
@@ -22,6 +22,7 @@ const validations = [
 //Rutas
 router.get('/login', usuarioController.login);
 
+router.post('/login', validations,uploadFile.single("filename"), usuarioController.loginProcess)
 
 //Crear Usuario
 router.get('/registro', usuarioController.registro);

@@ -26,19 +26,29 @@
         </div>
         <h1>NFT</h1>
 
-    <form action="/login" method="POST" class="registro">
+    <form action="/usuario/login" method="POST" class="registro" enctype="multipart/form-data">
         <div class="mail">
             <i class="far fa-envelope"></i> 
-            <input type="email" placeholder="Email" required minlength="6"> 
+            <input type="email" id="mail" name="mail" placeholder="Email" required minlength="6"> 
+            <% if (locals.errors && errors.mail){ %>
+                <div class="text-danger">
+                       <%= errors.mail.msg %> 
+                    </div> 
+                    <% } %> 
         </div>
         <div class="pass">
             <i class="fas fa-lock lock"></i>
-            <input type="password" placeholder="Contraseña" required>
-            <i class="far fa-eye-slash ver"></i>            
+            <input type="password" id="password" name="password" placeholder="Contraseña" required>
+            <i class="far fa-eye-slash ver"></i>   
+            <% if (locals.password && errors.password){ %>
+                <div class="text-danger">
+                       <%= errors.password.msg %> 
+                    </div> 
+                    <% } %>          
         </div>
 
 
-        <button type="submit"><a href="/home">Ingresar</a></button>
+        <button type="submit">Ingresar</a></button>
 
         <a href="#reset" class="forgot">¿Olvidaste tu contraseña?</a>
 

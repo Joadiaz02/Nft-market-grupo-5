@@ -1,9 +1,8 @@
 const fs = require('fs');
 const path=require('path');
 const bcrypt = require('bcryptjs');
-
 const { validationResult } = require('express-validator');
-
+const user = require("../models/user");
 const usuariosFilePath = path.join(__dirname, '../data/users.json');
 let usuariosJson = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 
@@ -13,6 +12,29 @@ const registroController={
     },
     login: (req, res) =>{
         res.render('../views/usuarios/login');
+    },
+
+    
+
+    loginProcess: (req,res)=>{
+      let userToLogin = user.findByField("mail", req.body.mail);
+
+       console.log("hola")
+      
+      if (userToLogin){
+        return res.send("hola");
+        let correctPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
+        if(correctPassword){
+            return res.send("ingreso");
+        }
+      }
+      return res.render('../views/usuarios/login',{
+        errors: {
+            mail:{
+                msg:"El mail ingresado no se encuentra registrado"
+            }
+        }
+      });
     },
     /*processRegister: (req, res) =>
     {
@@ -31,7 +53,7 @@ const registroController={
                 /*return res.send(req.body)*/
                 /*return res.send(resultValidation.mapped())*/
             }else{
-
+ 
         let nuevoUsuario = {
         id: usuariosJson[usuariosJson.length - 1].id + 1,
         nombre: req.body.nombre,
@@ -42,7 +64,7 @@ const registroController={
         pais_residencia: req.body.pais_residencia,
         intereses: req.body.intereses,
         foto: req.file.filename,
-        contraseña: bcrypt.hashSync(req.body.contrasena, 10)
+        password: bcrypt.hashSync(req.body.password, 10)
     }
     usuariosJson.push(nuevoUsuario);
     fs.writeFileSync(usuariosFilePath, JSON.stringify(usuariosJson, null, " "));

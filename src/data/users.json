@@ -176,5 +176,53 @@
   "intereses": "metaverso",
   "foto": "1669349189482_user.png",
   "contraseña": "$2a$10$0YRH5vohgxy4.I3zQm7ww.G1xC2TuU7c5tEENWW0NH3qWhRNNOdXS"
+ },
+ {
+  "id": 17,
+  "nombre": "Joaquin Felipe",
+  "apellido": "Diaz",
+  "usuario": "joako",
+  "mail": "joako@dh.com",
+  "nacimiento": "2002-10-20",
+  "pais_residencia": "Argentina",
+  "intereses": "deportes",
+  "foto": "1669938217462_user.png",
+  "contraseña": "$2a$10$JHlNujB6jRHWipNBSMuhN.wjV8nc0pJy3S3yK2qqAgNNBDvjQk.W."
+ },
+ {
+  "id": 18,
+  "nombre": "Javier Hernan ",
+  "apellido": "Diaz",
+  "usuario": "javi",
+  "mail": "javi@dh.com",
+  "nacimiento": "2022-12-14",
+  "pais_residencia": "Argentina",
+  "intereses": "deportes",
+  "foto": "1670037512765_user.png",
+  "contraseña": "$2a$10$WaKkdAQbM9GVRnHK6w9x..AxdmJOavBzKpOwM777WTYyU/hDzjAou"
+ },
+ {
+  "id": 19,
+  "nombre": "susana",
+  "apellido": "alonso",
+  "usuario": "susan",
+  "mail": "susana@dh.com",
+  "nacimiento": "2022-12-22",
+  "pais_residencia": "Argentina",
+  "intereses": "metaverso",
+  "foto": "1670393048761_user.png",
+  "password": "$2a$10$yhMAXR5XEBA07R5M30ekfeSZhM6rXex7WOQOb9vVP5NH//n4ulqvS"
+ },
+ {
+  "id": 20,
+  "nombre": "jose",
+  "apellido": "alonso",
+  "usuario": "joseal",
+  "mail": "alonso@dh.com",
+  "nacimiento": "2022-12-06",
+  "pais_residencia": "Uruguay",
+  "intereses": "deportes",
+  "foto": "1670528104754_user.png",
+  "password": "$2a$10$QMiMyPPPPiG2bkCjWlk0Xu.moRz30oFgAdb7dcrz/9HdnvrXdq7h."
  }
 ]
