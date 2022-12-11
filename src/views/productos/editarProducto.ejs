@@ -28,7 +28,7 @@
                 </div>
                 <h4>Editar producto</h4>
     
-                 <form class="form" method="post"  action="/producto/edit/<%= producto.id %>?_method=PUT" enctype="multipart/form-data">
+                 <form class="form" method="POST"  action="/productos/edit/<%= producto.id %>?_method=PUT" enctype="multipart/form-data">
     
                     <div class="categoria">
                         <label for="categoria">Nombre Producto</label>
@@ -63,7 +63,7 @@
     
                         <div class="botones">
                             <button type="submit">Editar Producto</button>
-                            <button class="modificar-boton" type="submit"><a href="/">Refrescar Formulario</a></button>
+                            <button class="modificar-boton"><a href="/">Refrescar Formulario</a></button>
     
                         </div>
                     </div>

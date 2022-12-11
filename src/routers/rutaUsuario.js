@@ -2,7 +2,10 @@ let express = require('express');
 let usuarioController = require('../controllers/usuarioController');
 let router = express.Router();
 
+//Middlewares
 const uploadFile = require('../middlewares/multerMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const autenticadorMiddleware = require('../middlewares/autenticadorMiddleware');
 
 //validation
 const { body } = require('express-validator');
@@ -20,12 +23,11 @@ const validations = [
 
 
 //Rutas
-router.get('/login', usuarioController.login);
-
+router.get('/login', validations, guestMiddleware, usuarioController.login);
 router.post('/login', validations,uploadFile.single("filename"), usuarioController.loginProcess)
 
 //Crear Usuario
-router.get('/registro', usuarioController.registro);
+router.get('/registro', guestMiddleware, usuarioController.registro);
 router.post('/detalle', uploadFile.single("filename"), validations, usuarioController.store);
 
 module.exports = router;

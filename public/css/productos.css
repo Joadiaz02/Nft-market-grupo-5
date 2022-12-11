@@ -179,6 +179,7 @@ main{
     flex-wrap: wrap;
     padding: 1px;
     margin-top: -5px;  
+    margin-bottom: -160px;
 }
 
 .section-articulos .sub-section-articulos{

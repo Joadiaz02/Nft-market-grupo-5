@@ -224,5 +224,29 @@
   "intereses": "deportes",
   "foto": "1670528104754_user.png",
   "password": "$2a$10$QMiMyPPPPiG2bkCjWlk0Xu.moRz30oFgAdb7dcrz/9HdnvrXdq7h."
+ },
+ {
+  "id": 21,
+  "nombre": "Ezequiel",
+  "apellido": "Carrasco",
+  "usuario": "another123",
+  "mail": "ezequielcarrasc1223@gmail.com",
+  "nacimiento": "1994-12-12",
+  "pais_residencia": "Argentina",
+  "intereses": "deportes",
+  "foto": "1670704391392_user.PNG",
+  "password": "$2a$10$d1CTktzVqo.8vbTmPM1Nx.38xtfqEPckobYf6deis0BA3T9VbtmqK"
+ },
+ {
+  "id": 22,
+  "nombre": "Hernan",
+  "apellido": "Rusbelt",
+  "usuario": "ezequielcarrasco1996_@gmail.com",
+  "mail": "ezequielcarrasco1996_@gmail.com",
+  "nacimiento": "1996-12-12",
+  "pais_residencia": "Argentina",
+  "intereses": "deportes",
+  "foto": "1670704523549_user.PNG",
+  "password": "$2a$10$098w7Vfp0C/cvOc4c4GrmOGa7ouJjNAIjCaN0LZAqTBaBR3i4BWRy"
  }
 ]

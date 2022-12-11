@@ -443,6 +443,8 @@ header{
 
 
 
+
+
 /******** ESCRITORIOS MUY ANCHOS **************/
 
 
@@ -459,6 +461,14 @@ header{
   padding: 3px;
 }
 
+.textoBotonHeaderProductos button{
+  color: white;
+  font-size: 16px;
+}
+
+a{
+  font-size: 16px;
+}
 
 .nft-barra-busqueda-mobile{
 display: none;

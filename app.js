@@ -19,6 +19,10 @@ app.use(methodOverride('_method')); // Para poder pisar el method="POST" en el f
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/src/views'));
 
+// ************ Implementación Session ************
+const session = require('express-session');
+app.use(session({secret: "Nuestro mensaje secreto"}));
+
 
 // ************ Sistema de Rutas ************
 const rutasHome = require('./src/routers/rutaHome.js');

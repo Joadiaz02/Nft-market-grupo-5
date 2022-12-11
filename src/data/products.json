@@ -3,25 +3,16 @@
   "id": 1,
   "nombreProducto": "Greenlam",
   "descripcion": "LLorem ipsum dolor sit amet consectetur adipisicing elit. Est, sed quasi magnam eveniet quia numquam possimus repudiandae rem molestias debitis, dolor, perspiciatis explicabo labore tenetur nostrum alias aliquam repellat dolorum.",
-  "imagen": "robot-nft.png",
+  "imagen": "pika.png",
   "categoria": "In hac habitasse platea dictumst.",
   "precioActual": "13.06",
   "descuento": "40"
  },
  {
-  "id": 2,
-  "nombreProducto": "Cardify",
+  "id": "3",
+  "nombreProducto": "Quo Luxe",
   "descripcion": "LLorem ipsum dolor sit amet consectetur adipisicing elit. Est, sed quasi magnam eveniet quia numquam possimus repudiandae rem molestias debitis, dolor, perspiciatis explicabo labore tenetur nostrum alias aliquam repellat dolorum.",
-  "imagen": "droga-nft.png",
-  "categoria": "In hac habitasse platea dictumst.",
-  "precioActual": "1.08",
-  "descuento": "20"
- },
- {
-  "id": 3,
-  "nombreProducto": "Quo Lux",
-  "descripcion": "LLorem ipsum dolor sit amet consectetur adipisicing elit. Est, sed quasi magnam eveniet quia numquam possimus repudiandae rem molestias debitis, dolor, perspiciatis explicabo labore tenetur nostrum alias aliquam repellat dolorum.",
-  "imagen": "robot-nft.png",
+  "imagen": "images31.jfif",
   "categoria": "Duis faucibus accumsan odio.",
   "precioActual": "1.04",
   "descuento": "35"
@@ -56,7 +47,7 @@
  {
   "id": 9,
   "nombreProducto": "hola3",
-  "descripcion": "hola3",
+  "descripcion": "LLorem ipsum dolor sit amet consectetur adipisicing elit. Est, sed quasi magnam eveniet quia numquam possimus repudiandae rem molestias debitis, dolor, perspiciatis explicabo labore tenetur nostrum alias aliquam repellat dolorum.",
   "imagen": "1667791734225_user.png",
   "precioActual": "3",
   "descuento": "3"
@@ -64,8 +55,8 @@
  {
   "id": 11,
   "nombreProducto": "Astronauta",
-  "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stand",
-  "imagen": "1669173260615_user.png",
+  "descripcion": "LLorem ipsum dolor sit amet consectetur adipisicing elit. Est, sed quasi magnam eveniet quia numquam possimus repudiandae rem molestias debitis, dolor, perspiciatis explicabo labore tenetur nostrum alias aliquam repellat dolorum.",
+  "imagen": "lebron.png",
   "categoria": "Monedas",
   "precioActual": "56",
   "descuento": "10"
@@ -73,8 +64,44 @@
  {
   "id": 12,
   "nombreProducto": "1",
-  "descripcion": "1",
-  "imagen": "1669173361067_user.png",
+  "descripcion": "LLorem ipsum dolor sit amet consectetur adipisicing elit. Est, sed quasi magnam eveniet quia numquam possimus repudiandae rem molestias debitis, dolor, perspiciatis explicabo labore tenetur nostrum alias aliquam repellat dolorum.",
+  "imagen": "images12.jfif",
+  "categoria": "1",
+  "precioActual": "1",
+  "descuento": "1"
+ },
+ {
+  "id": 13,
+  "nombreProducto": "1",
+  "descripcion": "LLorem ipsum dolor sit amet consectetur adipisicing elit. Est, sed quasi magnam eveniet quia numquam possimus repudiandae rem molestias debitis, dolor, perspiciatis explicabo labore tenetur nostrum alias aliquam repellat dolorum.",
+  "imagen": "images (1).jfif",
+  "categoria": "1",
+  "precioActual": "16",
+  "descuento": "1"
+ },
+ {
+  "id": 14,
+  "nombreProducto": "1",
+  "descripcion": "LLorem ipsum dolor sit amet consectetur adipisicing elit. Est, sed quasi magnam eveniet quia numquam possimus repudiandae rem molestias debitis, dolor, perspiciatis explicabo labore tenetur nostrum alias aliquam repellat dolorum.",
+  "imagen": "images.jfif",
+  "categoria": "1",
+  "precioActual": "1",
+  "descuento": "1"
+ },
+ {
+  "id": 15,
+  "nombreProducto": "1",
+  "descripcion": "LLorem ipsum dolor sit amet consectetur adipisicing elit. Est, sed quasi magnam eveniet quia numquam possimus repudiandae rem molestias debitis, dolor, perspiciatis explicabo labore tenetur nostrum alias aliquam repellat dolorum.",
+  "imagen": "images (1).png",
+  "categoria": "1",
+  "precioActual": "1",
+  "descuento": "1"
+ },
+ {
+  "id": 16,
+  "nombreProducto": "1",
+  "descripcion": "LLorem ipsum dolor sit amet consectetur adipisicing elit. Est, sed quasi magnam eveniet quia numquam possimus repudiandae rem molestias debitis, dolor, perspiciatis explicabo labore tenetur nostrum alias aliquam repellat dolorum.",
+  "imagen": "50e513115094373.6047d1f4cf3f1.jpg",
   "categoria": "1",
   "precioActual": "1",
   "descuento": "1"

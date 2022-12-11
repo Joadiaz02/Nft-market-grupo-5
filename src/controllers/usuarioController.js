@@ -19,12 +19,10 @@ const registroController={
     loginProcess: (req,res)=>{
       let userToLogin = user.findByField("mail", req.body.mail);
 
-       console.log("hola")
-      
       if (userToLogin){
-        return res.send("hola");
         let correctPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
         if(correctPassword){
+            req.session.userLogged = userToLogin;
             return res.send("ingreso");
         }
       }
