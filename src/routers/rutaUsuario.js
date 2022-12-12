@@ -6,7 +6,7 @@ let router = express.Router();
 const uploadFile = require('../middlewares/multerMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const autenticadorMiddleware = require('../middlewares/autenticadorMiddleware');
-
+const authMiddleware = require('../middlewares/authMiddleware');
 //validation
 const { body } = require('express-validator');
 
@@ -30,4 +30,7 @@ router.post('/login', validations,uploadFile.single("filename"), usuarioControll
 router.get('/registro', guestMiddleware, usuarioController.registro);
 router.post('/detalle', uploadFile.single("filename"), validations, usuarioController.store);
 
+
+router.get('/profile/', authMiddleware, usuarioController.profile);
+router.get('/logout/',  usuarioController.logout);
 module.exports = router;

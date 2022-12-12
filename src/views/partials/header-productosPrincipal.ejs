@@ -6,12 +6,19 @@
         <li><a href="/productos" class="active">Productos</a></li>
         <li><a href="/carrito">Tu Carrito</a></li>
         <li><a href="/productoS/crear">Crear Nuevo </a></li>
-    
+    <ul>
+      <% if(locals.isLogged){ %> 
+            
+      <li> <a href="/usuario/profile">Perfil </a></li>
+       <li><a href="/usuario/logout">Logout </a></li>
     </ul>
+    </ul>
+    <% } else{ %> 
     <div class="botonesIncioRegistro">
         <a class="textoBotonHeaderProductos" href="/usuario/login"><button class="button">Iniciar Sesión</button></a>
-        <a class="textoBotonHeaderProductos" href="/usuario/login"><button class="button">Registrarse</button></a>
+        <a class="textoBotonHeaderProductos" href="/usuario/registro"><button class="button">Registrarse</button></a>
     </div>
+    <% } %> 
     <a class="menuCelular" href="#"><img src="/images/burguer.png" alt="menu"></a>
 </header>
 

@@ -8,6 +8,7 @@ let usuariosJson = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 
 const registroController={
     registro: (req, res) =>{
+        
         res.render('../views/usuarios/registro');
     },
     login: (req, res) =>{
@@ -22,8 +23,13 @@ const registroController={
       if (userToLogin){
         let correctPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
         if(correctPassword){
+            delete userToLogin.password;
             req.session.userLogged = userToLogin;
-            return res.send("ingreso");
+            if(req.body.remember_usuario){
+               res.cookie("userEmail",req.body.mail,{maxAge:(1000*60)*2})
+            }
+           // return res.render('../views/usuarios/profile');
+           return res.redirect("profile")
         }
       }
       return res.render('../views/usuarios/login',{
@@ -33,6 +39,21 @@ const registroController={
             }
         }
       });
+    },
+
+
+    profile: (req,res)=>{
+          return res.render('../views/usuarios/profile',{
+            user: req.session.userLogged
+          });
+    },
+
+    logout: (req,res)=>{
+        res.clearCookie("userEmail");
+        req.session.destroy();
+       
+        
+      return res.redirect("/")
     },
     /*processRegister: (req, res) =>
     {

@@ -4,17 +4,14 @@
     <meta charset="utf-8">
     <title>The NFT Market Website</title>
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/stylesHeader.css">
+    <link rel="stylesheet" href="/css/styles-productos.css">
     <script src="//code.tidio.co/ovwalhfaredvvzneh06tcfjlqtoeznyz.js" async></script>
   </head>
   <body>
     <header>
-      <img src="/images/5modified.png" class="logoHome" id = "logoHome">
-        <ul>
-            <li ><a class="active">Inicio</a></li>
-            <li><a href="/productos">Productos</a> </li>
-            <li><a href="usuario/login">Ingresar</a></li>
-            <li><a href="usuario/registro">Registrarse</a></li>
-        </ul>
+      
+      <%- include("./partials/header-productosPrincipal")  %> 
     </header>
     <section>
       <img src="/images/astronaut.png" id = "stars">

@@ -1,7 +1,7 @@
 // ************ Require's ************
 let ejs = require('ejs');
 const express = require('express');
-
+const cookies = require('cookie-parser');
 // ********** express () **********
 const app = express();
 const methodOverride =  require('method-override'); // Para poder usar los métodos PUT y DELETE
@@ -20,10 +20,17 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/src/views'));
 
 // ************ Implementación Session ************
+
 const session = require('express-session');
-app.use(session({secret: "Nuestro mensaje secreto"}));
-
-
+const userLoggedMiddleware = require("./src/middlewares/userLoggedMiddleware")
+app.use(session({
+  secret: "Nuestro mensaje secreto",
+   resave: false,
+   saveUninitialized: false,
+}));
+// ************ Implementación cookie ************
+app.use(cookies());
+app.use(userLoggedMiddleware);
 // ************ Sistema de Rutas ************
 const rutasHome = require('./src/routers/rutaHome.js');
 const rutasProducto = require('./src//routers/rutaProducto.js');

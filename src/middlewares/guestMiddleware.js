@@ -1,6 +1,6 @@
 function guestMiddleware(req, res, next){
     if(req.session.userLogged){
-      return res.redirect('/productos')
+      return res.redirect('/usuario/profile')
         
     }else{
         next();

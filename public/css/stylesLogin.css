@@ -7,7 +7,14 @@
 img{
     pointer-events: none;
 }
-
+label{
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+}
 body {
     background-image: url(/images/fondoLogin.jpg);
     background-repeat: no-repeat;
