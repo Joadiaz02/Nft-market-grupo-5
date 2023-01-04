@@ -248,5 +248,53 @@
   "intereses": "deportes",
   "foto": "1670704523549_user.PNG",
   "password": "$2a$10$098w7Vfp0C/cvOc4c4GrmOGa7ouJjNAIjCaN0LZAqTBaBR3i4BWRy"
+ },
+ {
+  "id": 23,
+  "nombre": "hugo ",
+  "apellido": "papata",
+  "usuario": "hugote",
+  "mail": "hugo@dh.com",
+  "nacimiento": "2023-01-26",
+  "pais_residencia": "Chile",
+  "intereses": "Mercados",
+  "foto": "1672779597731_user.png",
+  "password": "$2a$10$qSzRmsGBzee5dlvV8wkMpOl9pIatVsBqTPLroXydWlWqncYl5PODu"
+ },
+ {
+  "id": 24,
+  "nombre": "jorge",
+  "apellido": "paz",
+  "usuario": "jorpaz",
+  "mail": "paz@dh.com",
+  "nacimiento": "2023-01-25",
+  "pais_residencia": "Uruguay",
+  "intereses": "metaverso",
+  "foto": "1672779719730_user.png",
+  "password": "$2a$10$SVr22eXFqWbZY69TOyHt5ODlc/BHcRqdGT.NVNev1wBaLVhedLZuS"
+ },
+ {
+  "id": 25,
+  "nombre": "jose",
+  "apellido": "kaka",
+  "usuario": "kakajose",
+  "mail": "josekaka@dh.com",
+  "nacimiento": "2023-01-02",
+  "pais_residencia": "Bolivia",
+  "intereses": "juegos",
+  "foto": "1672779860120_user.png",
+  "password": "$2a$10$FKWQcJgL.fCqTjwVM8EIweBXrHVW41T7YmPZa0SN9JYpXB1KXCEWC"
+ },
+ {
+  "id": 26,
+  "nombre": "lionel",
+  "apellido": "messi",
+  "usuario": "mesias",
+  "mail": "messi@dh.com",
+  "nacimiento": "2023-02-08",
+  "pais_residencia": "Uruguay",
+  "intereses": "deportes",
+  "foto": "1672779984745_user.png",
+  "password": "$2a$10$O9t3a0eqM9tBiosteqj/r.N/ZRN66s7APce1C7DX0lPLV0pH2Gm4S"
  }
 ]

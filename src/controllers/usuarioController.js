@@ -87,7 +87,9 @@ const registroController={
     }
     usuariosJson.push(nuevoUsuario);
     fs.writeFileSync(usuariosFilePath, JSON.stringify(usuariosJson, null, " "));
-    res.redirect('/usuario/registro');}
+   return res.render('../views/usuarios/login')
+    //res.redirect('/usuario/login')
+    ;}
 
 
 }

@@ -122,7 +122,7 @@
             </div>
 
             <div class="passR">
-                <input type="text" id="password"  placeholder="Contraseña" name="password">
+                <input type="password" id="password"  placeholder="Contraseña" name="password">
                 <% if (locals.errors && errors.password) { %>
                     <div class ="text-danger">
                        <%= errors.password.msg %> 
@@ -132,7 +132,7 @@
             </div>
 
             <div class="passR">
-                <input type="text" id="confirmar_contrasena"  placeholder="Contraseña" name="confirmar_contrasena">
+                <input type="password" id="confirmar_contrasena"  placeholder="Contraseña" name="confirmar_contrasena">
                 <% if (locals.errors && errors.confirmar_contrasena) { %>
                     <div class ="text-danger">
                        <%= errors.confirmar_contrasena.msg %> 
