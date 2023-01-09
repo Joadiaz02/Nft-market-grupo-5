@@ -37,13 +37,14 @@ const rutasProducto = require('./src//routers/rutaProducto.js');
 const rutasCarrito = require('./src//routers/rutaCarrito.js');
 const rutasUsuario = require('./src//routers/rutaUsuario.js');
 const rutasError = require('./src//routers/rutaError404.js')
+const moviesRouter = require('./src//routers/moviesRouter.js')
 
 app.use('/', rutasHome);
 app.use('/productos', rutasProducto);
 app.use('/usuario', rutasUsuario);
 app.use('/carrito', rutasCarrito);
 app.use('/error', rutasError);
-
+app.use('/movies', moviesRouter);
 
 
 // ************ Creando servidor ************
