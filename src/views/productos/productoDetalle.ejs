@@ -15,19 +15,19 @@
     <main>
         <section class="section1">
             <div class="section1-div1">
-                <img class="img-producto" src="/images/<%= producto.imagen %>" alt="imagen producto">
+                <img class="img-producto" src="/images/<%= producto.imagen_producto %>" alt="imagen producto">
             </div>
             <div class="section1-div2">
                 
 
                 <div class="detalle">
-                    <h1 class="titulo-producto"> <%= producto.nombreProducto %></h1>
-                    <p>Categoría:  <%= producto.categoria %></p>
+                    <h1 class="titulo-producto"> <%= producto.nombre_producto %></h1>
+                    <p>Categoría:  <%= producto.id_categoria_producto %></p>
                 </div>
 
                 <div class="precio">
-                    <p class="top-venta"> Mayor venta : <%= producto.precioActual %> USD</p>
-                    <p> Descuento:  <%= producto.descuento %> %</p>
+                    <p class="top-venta"> Mayor venta : <%= producto.unidad_token_precio_actual%> USD</p>
+                    <p> Descuento:  <%= producto.descuento_producto %> %</p>
                 </div>
 
                 <div class="div-button-box">

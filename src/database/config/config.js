@@ -2,8 +2,8 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "movies_db",
+    "password": "barquelona2002",
+    "database": "nft_market",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

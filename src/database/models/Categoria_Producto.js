@@ -9,7 +9,7 @@ function categoria_producto (sequelize, dataTypes) {
             autoIncrement: true
         },
         descripcion_categoria: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING(200)
         },
         created_at: {
             type: dataTypes.DATE

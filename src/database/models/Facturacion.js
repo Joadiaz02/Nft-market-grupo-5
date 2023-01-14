@@ -4,22 +4,24 @@ function facturacion (sequelize, dataTypes) {
 
     const cols = {
         id_factura: {
-           
+            type: dataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
         },
         id_usuario: {
-            
+            type: dataTypes.INTEGER
         },
         id_orden_compra: {
-            
+            type: dataTypes.INTEGER
         },
         created_at: {
-           
+            type: dataTypes.DATE
         },
         updated_at: {
-            
+            type: dataTypes.DATE
         },
         deleted_at: {
-            
+            type: dataTypes.DATE
         }
     }
 

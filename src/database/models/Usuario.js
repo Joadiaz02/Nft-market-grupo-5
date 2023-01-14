@@ -9,33 +9,46 @@ function usuario (sequelize, dataTypes) {
             autoIncrement: true
         },
         id_categoria_usuario:{
-            type: dataTypes.STRING
+            type: dataTypes.INTEGER
         },
         cuenta_usuario: {
+            type: dataTypes.STRING(20)
         },
         correo_usuario: {
+            type: dataTypes.STRING(30)
         },
         nombre_usuario: {
+            type: dataTypes.STRING(15)
         },
         apellido_usuario: {
+            type: dataTypes.STRING(15)
         },
         contrasena_usuario: {
+            type: dataTypes.STRING(200)
         },
         contacto_usuario: {
+            type: dataTypes.STRING(20)
         },
         residencia_usuario: {
+            type: dataTypes.STRING(20)
         },
         id_categoria_preferida: {
+            type: dataTypes.INTEGER
         },
         imagen_perfil: {
+            type: dataTypes.STRING(45)
         },
         fecha_nacimiento: {
+            type: dataTypes.DATE
         },
         created_at: {
+            type: dataTypes.DATE
         },
         updated_at: {
+            type: dataTypes.DATE
         },
         deleted_at: {
+            type: dataTypes.DATE
         }
     }
 
@@ -44,9 +57,15 @@ function usuario (sequelize, dataTypes) {
         timestamps: false
     }
 
-    const Usuario = sequelize.define(alias, cols, config)
+    //const Usuario = sequelize.define(alias, cols, config)
+    //Usuario.associate= function(models){
+        //Usuario.hasMany(models.producto,{
+         //   as: "productos",
+       //     foreingKey: "id_categoria_preferida"
+     //   });
+   // }
 
-    return Usuario
+    return usuario
 
 }
 

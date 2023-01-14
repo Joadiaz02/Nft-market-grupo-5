@@ -9,24 +9,24 @@ const autenticadorMiddleware = require('../middlewares/autenticadorMiddleware');
 
 
 // Productos Home
-router.get('/', productoController.index);
+router.get('/', productoController.indexsql);
 
 
 // Crear Productos
-router.get('/crear', autenticadorMiddleware, productoController.crear);
-router.post('/detalle', uploadFile.single('filename'), productoController.store);
+router.get('/crear', autenticadorMiddleware, productoController.crearsql);
+router.post('/detalle', uploadFile.single('filename'), productoController.storesql);
 
 
 // Detalle Producto
-router.get('/detalle/:id', productoController.detalleProducto);
+router.get('/detalle/:id', productoController.detalleProductoSql);
 
 
 //Editar Productos
-router.get('/edit/:id', autenticadorMiddleware, productoController.editar);
-router.put('/edit/:id', uploadFile.single('filename'), productoController.update);
+router.get('/edit/:id', autenticadorMiddleware, productoController.editarSql);
+router.put('/edit/:id', uploadFile.single('filename'), productoController.updateSql);
 
 //Eliminar Productos
-router.delete('/delete/:id', autenticadorMiddleware, productoController.eliminar);
+router.delete('/delete/:id', autenticadorMiddleware, productoController.eliminarSql);
 
 
 module.exports = router;
