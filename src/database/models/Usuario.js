@@ -56,7 +56,7 @@ function usuario (sequelize, dataTypes) {
         tableName: 'usuarios',
         timestamps: false
     }
-
+    const usuario = sequelize.define(alias, cols, config)
     //const Usuario = sequelize.define(alias, cols, config)
     //Usuario.associate= function(models){
         //Usuario.hasMany(models.producto,{

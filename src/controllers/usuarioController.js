@@ -3,6 +3,8 @@ const path=require('path');
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const user = require("../models/user");
+const db = require('../database/models');
+const usuario = require('../database/models/Usuario');
 const usuariosFilePath = path.join(__dirname, '../data/users.json');
 let usuariosJson = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 
@@ -15,7 +17,12 @@ const registroController={
         res.render('../views/usuarios/login');
     },
 
-    
+    loginsql:(req,res) =>{
+        db.usuario.findAll()
+        .then(function(usuario){
+            res.render('../views/usuarios/login', {usuario});
+        })
+    },
 
     loginProcess: (req,res)=>{
       let userToLogin = user.findByField("mail", req.body.mail);
@@ -40,7 +47,43 @@ const registroController={
         }
       });
     },
+    loginProcessSql: (req,res)=>{
+        let userToLogin =  db.usuario.findOne({
+            where: {
+                correo_usuario : req.body.correo_usuario,
+                contrasena_usuario: req.body.contrasena_usuario
+            }
+        })
 
+        if (userToLogin){
+          //let correctPassword = bcrypt.compareSync(req.body.contrasena_usuario, userToLogin.contrasena_usuario);
+          if(userToLogin){
+              delete userToLogin.contrasena_usuario;
+              req.session.userLogged = userToLogin;
+              if(req.body.remember_usuario){
+                 res.cookie("userEmail",req.body.correo_usuario,{maxAge:(1000*60)*2})
+              }
+             // return res.render('../views/usuarios/profile');
+             return res.redirect("profile")
+          }
+        }
+        return res.render('../views/usuarios/login',{
+          errors: {
+            correo_usuario:{
+                  msg:"El mail ingresado no se encuentra registrado"
+              }
+          }
+        });
+    },
+     loginProcessSql2: function(req,res){
+        db.usuario.findOne({
+            where: {
+                correo_usuario : req.body.correo_usuario,
+                contrasena_usuario: req.body.correo_usuario
+            }
+        })
+        return res.redirect("profile")
+     },
 
     profile: (req,res)=>{
           return res.render('../views/usuarios/profile',{
@@ -92,6 +135,26 @@ const registroController={
     ;}
 
 
+},
+crearsql: (req,res)=>{
+    db.usuario.findAll()
+    .then(function(usuario){
+        res.render('../views/usuarios/registro', {usuario});
+    })
+},
+storeSql: (req, res)=>{
+db.usuario.create({
+    nombre_usuario: req.body.nombre_usuario,
+        apellido_usuario: req.body.apellido_usuario,
+        cuenta_usuario: req.body.cuenta_usuario,
+        correo_usuario: req.body.correo_usuario,
+        fecha_nacimiento: req.body.fecha_nacimiento,
+        residencia_usuario: req.body.residencia_usuario,
+        id_categoria_preferida: req.body.id_categoria_preferida,
+        imagen_perfil: req.file.filename,
+        contrasena_usuario: bcrypt.hashSync(req.body.contrasena_usuario, 10)
+})
+res.render('../views/usuarios/login')
 }
 }
 

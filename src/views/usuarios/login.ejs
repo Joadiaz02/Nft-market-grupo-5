@@ -29,18 +29,18 @@
     <form action="/usuario/login" method="POST" class="registro" enctype="multipart/form-data">
         <div class="mail">
             <i class="far fa-envelope"></i> 
-            <input type="email" id="mail" name="mail" placeholder="Email" required minlength="6"> 
-            <% if (locals.errors && errors.mail){ %>
+            <input type="email" id="correo_usuario" name="correo_usuario" placeholder="Email" required minlength="6"> 
+            <% if (locals.errors && errors.correo_usuario){ %>
                 <div class="text-danger">
-                       <%= errors.mail.msg %> 
+                       <%= errors.correo_usuario.msg %> 
                     </div> 
                     <% } %> 
         </div>
         <div class="pass">
             <i class="fas fa-lock lock"></i>
-            <input type="password" id="password" name="password" placeholder="Contraseña" required>
+            <input type="password" id="contrasena_usuario" name="contrasena_usuario" placeholder="Contraseña" required>
             <i class="far fa-eye-slash ver"></i>   
-            <% if (locals.password && errors.password){ %>
+            <% if (locals.errors && errors.password){ %>
                 <div class="text-danger">
                        <%= errors.password.msg %> 
                     </div> 

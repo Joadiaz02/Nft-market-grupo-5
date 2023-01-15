@@ -23,12 +23,12 @@ const validations = [
 
 
 //Rutas
-router.get('/login', validations, guestMiddleware, usuarioController.login);
-router.post('/login', validations,uploadFile.single("filename"), usuarioController.loginProcess)
+router.get('/login', validations, guestMiddleware, usuarioController.loginsql);
+router.post('/login', validations,uploadFile.single("filename"), usuarioController.loginProcessSql)
 
 //Crear Usuario
-router.get('/registro', guestMiddleware, usuarioController.registro);
-router.post('/detalle', uploadFile.single("filename"), validations, usuarioController.store);
+router.get('/registro', guestMiddleware, usuarioController.crearsql);
+router.post('/detalle', uploadFile.single("filename"), validations, usuarioController.storeSql);
 
 
 router.get('/profile/', authMiddleware, usuarioController.profile);

@@ -32,51 +32,51 @@
         <form action="/usuario/detalle" method="POST" class="form" enctype="multipart/form-data">
 
             <div class="nombre">
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre">
-                <% if (locals.errors && errors.nombre) { %>
+                <input type="text" id="nombre_usuario" name="nombre_usuario" placeholder="Nombre">
+                <% if (locals.errors && errors.nombre_usuario) { %>
                     <div class ="text-danger">
-                       <%= errors.nombre.msg %> 
+                       <%= errors.nombre_usuario.msg %> 
 
                     </div>
                     <% } %>
             </div>
             <div class="apellido">
-                <input type="text" id="apellido" name="apellido" placeholder="Apellido">
-                <% if (locals.errors && errors.apellido) { %>
+                <input type="text" id="apellido_usuario" name="apellido_usuario" placeholder="Apellido">
+                <% if (locals.errors && errors.apellido_usuario) { %>
                     <div class ="text-danger">
-                       <%= errors.apellido.msg %> 
+                       <%= errors.apellido_usuario.msg %> 
 
                     </div>
                     <% } %>
             </div>
             <div class="user">
-                <input type="usuario" id="usuario" placeholder="Nombre de Usuario" name="usuario">
-                <% if (locals.errors && errors.user) { %>
+                <input type="text" id="cuenta_usuario" placeholder="Nombre de Usuario" name="cuenta_usuario">
+                <% if (locals.errors && errors.cuenta_usuario) { %>
                     <div class ="text-danger">
-                       <%= errors.user.msg %> 
+                       <%= errors.cuenta_usuario.msg %> 
 
                     </div>
                     <% } %>
             </div>
             <div class="mail-userProfile">
-                <input type="email" id="mail" placeholder="Correo Electrónico" name="mail">
-                <% if (locals.errors && errors.mail) { %>
+                <input type="email" id="correo_usuario" placeholder="Correo Electrónico" name="correo_usuario">
+                <% if (locals.errors && errors.correo_usuario) { %>
                     <div class ="text-danger">
-                       <%= errors.mail.msg %> 
+                       <%= errors.correo_usuario.msg %> 
                    </div>
                     <% } %>
             </div>   
             <div class="nacimiento">
                 <label for="nacimiento">Fecha de Nacimiento</label>
-                <input type="date" id="nacimiento" name="nacimiento">
-                <% if (locals.errors && errors.nacimiento) { %>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+                <% if (locals.errors && errors.fecha_nacimiento) { %>
                     <div class ="text-danger">
-                       <%= errors.nacimiento.msg %> 
+                       <%= errors.fecha_nacimiento.msg %> 
 
                     </div>
                     <% } %>
             </div>
-            <select name="pais_residencia" class="domicilio">
+            <select name="residencia_usuario" id="residencia_usuario"class="domicilio">
                 <option value="">Elegí país de residencia</option>
                 <% 
                 let paises = ['Argentina', 'Bolivia', 'Brasil', 'Colombia', 'Chile', 'Ecuador', 'Paraguay', 'Perú', 'Uruguay', 'Venezuela']
@@ -84,9 +84,9 @@
                 <% for (const unPais of paises){ %>
                     <option value="<%= unPais %>"> <%= unPais%> </option>
                 <% } %>
-                <% if (locals.errors && errors.pais_residencia) { %>
+                <% if (locals.errors && errors.residencia_usuario) { %>
                     <div class ="text-danger">
-                       <%= errors.pais_residencia.msg %> 
+                       <%= errors.residencia_usuario.msg %> 
 
                     </div>
                     <% } %>
@@ -95,23 +95,23 @@
             <div class="intereses">
                 <h4>Intereses</h4>
                 <div class="checks">
-                    <input type="radio" name="intereses" value="deportes">
+                    <input type="radio" name="id_categoria_preferida" value="1">
                     <label for="deportes">Deportes</label>
                 </div>
                 <div class="checks">
-                    <input type="radio" name="intereses" value="metaverso" >
+                    <input type="radio" name="id_categoria_preferida" value="2" >
                     <label for="metaverso">Metaverso</label>
                 </div>
                 <div class="checks">
-                    <input type="radio" name="intereses" value="juegos">
+                    <input type="radio" name="id_categoria_preferida" value="3">
                     <label for="juegos">Juegos</label>
                 </div>    
                 <div class="checks">
-                    <input type="radio" name="intereses" value="investigacion">
+                    <input type="radio" name="id_categoria_preferida" value="4">
                     <label for="investigacion">Investigación</label>
                 </div>    
                 <div class="checks">
-                    <input type="radio" name="intereses" value="Mercados">
+                    <input type="radio" name="id_categoria_preferida" value="5">
                     <label for="Mercados">Mercados</label>
                 </div>
             </div>
@@ -122,20 +122,20 @@
             </div>
 
             <div class="passR">
-                <input type="password" id="password"  placeholder="Contraseña" name="password">
-                <% if (locals.errors && errors.password) { %>
+                <input type="password" id="contrasena_usuario"  placeholder="Contraseña" name="contrasena_usuario">
+                <% if (locals.errors && errors.contrasena_usuario) { %>
                     <div class ="text-danger">
-                       <%= errors.password.msg %> 
+                       <%= errors.contrasena_usuario.msg %> 
 
                     </div>
                     <% } %>
             </div>
 
             <div class="passR">
-                <input type="password" id="confirmar_contrasena"  placeholder="Contraseña" name="confirmar_contrasena">
-                <% if (locals.errors && errors.confirmar_contrasena) { %>
+                <input type="password" id="password"  placeholder="Contraseña" name="password">
+                <% if (locals.errors && errors.password) { %>
                     <div class ="text-danger">
-                       <%= errors.confirmar_contrasena.msg %> 
+                       <%= errors.password.msg %> 
 
                     </div>
                     <% } %>
