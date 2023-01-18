@@ -22,8 +22,3 @@ Refererecias sitios:
 
 Tipografia Sitio: https://fonts.google.com/specimen/Fredoka+One 
 */
-
-Usuarios de Prueba:
-
-user: susana_alanso@hotmail.com
-pw: hola123
