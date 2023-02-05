@@ -154,7 +154,8 @@ db.usuario.create({
         imagen_perfil: req.file.filename,
         contrasena_usuario: bcrypt.hashSync(req.body.contrasena_usuario, 10)
 })
-res.render('../views/usuarios/login')
+/*res.render('../views/usuarios/login')*/
+res.redirect('/usuario/login')
 }
 }
 

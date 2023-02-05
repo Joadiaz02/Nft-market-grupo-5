@@ -54,7 +54,7 @@ const productsControllers = {
             unidad_token_precio_actual: req.body.unidad_token_precio_actual,
             descuento_producto: req.body.descuento_producto
         })
-        res.redirect('/productos/crear');
+        res.redirect('/productos');
     },
     editar: (req, res) => {
         const id = req.params.id;
@@ -111,7 +111,7 @@ const productsControllers = {
                 id : req.params.id
             }
         })
-        res.redirect('/')
+        res.redirect('/productos')
     },
 
     eliminar: (req, res) => {
@@ -128,7 +128,7 @@ db.producto.destroy({
         id : req.params.id
     }
 })
-res.redirect('/');
+res.redirect('/productos');
     },
 
     detalleProducto: (req, res) => {
