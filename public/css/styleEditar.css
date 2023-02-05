@@ -7,6 +7,24 @@ img{
     pointer-events: none;
 }
 
+.errores{
+    font-size: 15px;
+    text-align: center;
+    list-style-type: none;
+    color: red;
+    font-weight: bold;
+    
+}
+.is-invalid {
+    color:  white;
+    background-color: #842029
+   
+}
+.is-valid {
+    color:  white;
+    background-color: #198754;
+}
+
 .main2 {
     background-color: rgba(255, 191, 248, 0.747);
     width: 355px;

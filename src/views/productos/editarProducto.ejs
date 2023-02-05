@@ -27,7 +27,7 @@
                     <img src="/images/5.png" alt="logo comercial">
                 </div>
                 <h4>Editar producto</h4>
-    
+                <ul id="errores" class = "errores"></ul>
                  <form class="form" method="POST"  action="/productos/edit/<%= producto.id %>?_method=PUT" enctype="multipart/form-data">
     
                     <div class="categoria">
@@ -73,7 +73,7 @@
             </div>
        </main>
        <%- include("../partials/footer") %>
-    
+       <script src="/js/edit.js"></script>
     </body>
 
 </html>

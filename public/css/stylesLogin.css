@@ -4,6 +4,25 @@
     box-sizing: border-box;
 }
 
+.errores{
+    font-size: 15px;
+    text-align: center;
+    list-style-type: none;
+    color: red;
+    font-weight: bold;
+    
+}
+.is-invalid {
+    color:  white;
+    background-color: #842029
+   
+}
+.is-valid {
+    color:  white;
+    background-color: #198754;
+}
+
+
 img{
     pointer-events: none;
 }
@@ -60,7 +79,7 @@ h1 {
 
 }
 
-.registro {
+.form {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -68,7 +87,7 @@ h1 {
     font-weight: bold;
 }
 
-.registro input {
+.form input {
     height: 24px;
     padding: 5px;
     margin-left: -5px;
@@ -137,7 +156,7 @@ h1 {
     margin: 5px auto;
 }
 
-.registro p {
+.form p {
     text-align: center;
     font-size: 10px;
     padding: 15px;
@@ -157,11 +176,11 @@ h1 {
     padding: 0px;
 }
 
-.registro button a {
+.form button a {
     color: rgb(255, 255, 191);
 }
 
-.registro button {
+.form button {
 
     width: 100px;
     height: 30px;

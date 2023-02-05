@@ -25,11 +25,12 @@
             <img class="logo-login" src="/images/5.png" alt="Logo">
         </div>
         <h1>NFT</h1>
+        <ul id="errores" class = "errores"></ul>
 
-    <form action="/usuario/login" method="POST" class="registro" enctype="multipart/form-data">
+    <form action="/usuario/login" method="POST" class="form" enctype="multipart/form-data">
         <div class="mail">
             <i class="far fa-envelope"></i> 
-            <input type="email" id="correo_usuario" name="correo_usuario" placeholder="Email" required minlength="6"> 
+            <input type="email" id="correo_usuario" name="correo_usuario" placeholder="Email"> 
             <% if (locals.errors && errors.correo_usuario){ %>
                 <div class="text-danger">
                        <%= errors.correo_usuario.msg %> 
@@ -38,7 +39,7 @@
         </div>
         <div class="pass">
             <i class="fas fa-lock lock"></i>
-            <input type="password" id="contrasena_usuario" name="contrasena_usuario" placeholder="Contraseña" required>
+            <input type="password" id="contrasena_usuario" name="contrasena_usuario" placeholder="Contraseña">
             <i class="far fa-eye-slash ver"></i>   
             <% if (locals.errors && errors.password){ %>
                 <div class="text-danger">
@@ -58,7 +59,9 @@
 
     </form>
 </div>
-<script src="/js/index.js"></script>
-</body>
 <%- include("../partials/footer")  %> 
+
+<script src="/js/login.js"></script>
+</body>
+
 </html>
