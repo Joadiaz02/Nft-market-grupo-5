@@ -38,6 +38,7 @@ const rutasCarrito = require('./src//routers/rutaCarrito.js');
 const rutasUsuario = require('./src//routers/rutaUsuario.js');
 const rutasError = require('./src//routers/rutaError404.js')
 const moviesRouter = require('./src//routers/moviesRouter.js')
+const apiUsuarioRouter = require('./src//routers/usuariosApi.js')
 
 app.use('/', rutasHome);
 app.use('/productos', rutasProducto);
@@ -45,6 +46,7 @@ app.use('/usuario', rutasUsuario);
 app.use('/carrito', rutasCarrito);
 app.use('/error', rutasError);
 app.use('/movies', moviesRouter);
+app.use('/usuariosApi', apiUsuarioRouter);
 
 
 // ************ Creando servidor ************
