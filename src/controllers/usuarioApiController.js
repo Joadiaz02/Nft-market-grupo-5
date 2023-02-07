@@ -6,6 +6,7 @@ let usuariosJson = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));*/
 const db = require('../database/models');
 const sequelize = db.sequelize;
 
+const user = db.usuario
 
 
 module.exports = {
@@ -65,9 +66,7 @@ module.exports = {
             response.info.status = 400
             response.info.msg = e.message
             res.json(response)
-        }
-        
-
+        }        
 }
 
 }
