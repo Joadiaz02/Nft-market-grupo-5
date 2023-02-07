@@ -65,7 +65,7 @@ i{
 .cajaMailDerechos p{
     color: #8C8C94;
     font-size: 0.781rem;
-    margin-top: 5.5rem;
+    margin-top: 1.5rem;
     text-align: end;
 }
 
@@ -86,6 +86,7 @@ input{
     width: 12.563rem;
     border: none;
     text-indent: 0.625rem;
+    margin-top: 3%;
 }
 
 /* Parte Celular */

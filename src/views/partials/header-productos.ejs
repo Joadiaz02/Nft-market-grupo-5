@@ -1,0 +1,32 @@
+<header class="headerProducto">
+    
+    <img  src="/images/5modified.png" alt="Logo" class="img-logo">
+    <div class="cajaMailDerechos">
+        <form action="#" method="post">
+            <label for="correo"></label>
+            <input type="email" name="email" id="correo" placeholder="Buscar en la web..." required>
+            <button class="footerButton" type="submit">Go</button>
+        </form>
+        
+    </div>
+    <ul type="none">
+        <li><a href="/productos" class="active">Productos</a></li>
+        <li><a href="/carrito">Tu Carrito</a></li>
+       
+        <% if(locals.isLogged){ %> 
+        <li><a href="/productoS/crear">Crear Nuevo </a></li>
+    <ul>
+      
+            
+      <li> <a href="/usuario/profile">Perfil </a></li>
+       <li><a href="/usuario/logout">Logout </a></li>
+    </ul>
+    </ul>
+    <% } else{ %> 
+    <div class="botonesIncioRegistro">
+        <a class="textoBotonHeaderProductos" href="/usuario/login"><button class="button">Iniciar Sesión</button></a>
+        <a class="textoBotonHeaderProductos" href="/usuario/registro"><button class="button">Registrarse</button></a>
+    </div>
+    <% } %> 
+    <a class="menuCelular" href="#"><img src="/images/burguer.png" alt="menu"></a>
+</header>

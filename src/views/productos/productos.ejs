@@ -16,7 +16,7 @@
         
     </head>
     <body>
-        <%- include("../partials/header-productosPrincipal")  %> 
+        <%- include("../partials/header-productos")  %> 
         <main>
             <img class ="Banner" src="/images/gato.jpg" alt="Banner">
             <section class="section-articulos">
@@ -24,6 +24,7 @@
                 <% producto.forEach(producto=> { %>
                     <section class = "sub-section-articulos">
                         <article>
+                            <h2><%= producto.nombre_producto %> </h2>
                                 <a href = "productos/detalle/<%= producto.id %>"><img class ="Imagen-articulo" src="/images/<%= producto.imagen_producto %>" alt="Alien"></a>
                                 <section class = "descripcionProducto">
                                     <div class = "envioCamion">
@@ -33,10 +34,15 @@
                                     permit asignle un flex row y poder dejar un espacio debajo de
                                     h3 descripciones tal como pedía el ejercicio de la clase 14 -->
                                         <div class = "precioDescuento">
+                                            
+                                            
+                                       
                                             <p class="Precios"><%= producto.unidad_token_precio_actual %> ETH</p>
                                             <p class="Descuentos"><%= producto.descuento_producto %> OFF%</p>
                                         </div>
+                                
                                         <h3 class="Descripciones"><%= producto.descripcion_producto %></h3>
+
                                         <form action="/productos/delete/<%= producto.id%>?_method=DELETE" method="POST" style="display: inline-flex ;margin-top: 2px;">
                                             <button type="submit" class="btn btn-outline-danger btn-block">Eliminar</button>
                                         </form>

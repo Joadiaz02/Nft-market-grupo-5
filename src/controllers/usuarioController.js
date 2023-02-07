@@ -152,6 +152,7 @@ db.usuario.create({
         residencia_usuario: req.body.residencia_usuario,
         id_categoria_preferida: req.body.id_categoria_preferida,
         imagen_perfil: req.file.filename,
+        contacto_usuario: req.body.contacto_usuario,
         contrasena_usuario: bcrypt.hashSync(req.body.contrasena_usuario, 10)
 })
 /*res.render('../views/usuarios/login')*/
