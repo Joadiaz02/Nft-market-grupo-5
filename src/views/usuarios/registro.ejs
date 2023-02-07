@@ -121,6 +121,16 @@
                 <label for="foto">Foto de Perfil</label>
                 <input type="file" id="filename" name="filename">
             </div>
+            <div class="passR">
+                <input type="text" id="contacto_usuario"  placeholder="contacto" name="contacto_usuario">
+                <% if (locals.errors && errors.contacto_usuario) { %>
+                    <div class ="text-danger">
+                       <%= errors.contacto_usuario.msg %> 
+
+                    </div>
+                    <% } %>
+            </div>
+
 
             <div class="passR">
                 <input type="password" id="contrasena_usuario"  placeholder="Contraseña" name="contrasena_usuario">
@@ -132,6 +142,7 @@
                     <% } %>
             </div>
 
+           
             <div class="passR">
                 <input type="password" id="password"  placeholder="Contraseña" name="password">
                 <% if (locals.errors && errors.password) { %>

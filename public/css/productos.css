@@ -284,6 +284,11 @@ a{
 }
 
 p.Precios{font-size: 18px;
+
+   }
+   p.Nombre{font-size: 22px;
+color: purple;
+margin-right: 10px;
    }
 
 p.Descuentos{
