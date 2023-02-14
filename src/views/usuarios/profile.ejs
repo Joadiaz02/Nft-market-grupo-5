@@ -18,12 +18,45 @@
 
 
 
-<body>
-    <%- include("../partials/header-productosPrincipal")  %> 
-    <h2>Bienvenido <%= locals.userLogged.usuario%> </h2>
-    <div>
-        <img class="img-producto" src="/images/pika.png" alt="astronaut">
-    </div>
+
+    <body>
+        <%- include("../partials/header-productosPrincipal")  %> 
+    
+        <main>
+            <h2>BIENVENIDO A NFT MARKET</H2>
+            <section class="section1">
+        
+                <div class="section1-div1">
+                    <img class="img-producto" src="/images/1675804640388_user.jpg" alt="imagen producto">
+                </div>
+           
+                <div class="section1-div2">
+                    
+    
+                    <div class="detalle">
+                        <h1 class="titulo-producto"> Categoría preferida: Juegos </h1>
+                       
+                    </div>
+    
+                    <div class="precio">
+                        <p class="top-venta"> NFT points : 10800 </p>
+                    </div>
+    
+                    <div class="div-button-box">
+                        <a class="button-div" href="/productos"><button class="button-div"> COMPRAR NFT</button></a>
+                       
+                    </div>
+                    
+                </div>
+            </section>
+    
+            <section class="descripcion">
+            
+                   
+            </section>
+    
+    
+        </main>
     <%- include("../partials/footer")  %>
 </body>
 

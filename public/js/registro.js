@@ -43,7 +43,7 @@ window.onload = function (){
        }
 
        let image = document.querySelector("#filename");
-       let validExtensions = /(.jpg|.jpeg|.png)$/i;
+       let validExtensions = /(.jpg|.jpeg|.png|jfif)$/i;
        if(filename.value == "" || !validExtensions.exec(image.value)){
         errores.push("Debe cargar foto y en formato correcto")
         filename.classList.add('is-invalid')

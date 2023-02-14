@@ -6,7 +6,11 @@
     margin: 0rem;
     font-family: 'Be Vietnam Pro', sans-serif;
 }
-
+h2{
+    margin-left: 8%;
+    margin-top: 5%;
+    color:#8B48BF;
+}
 
 img{
     pointer-events: none;
@@ -30,7 +34,10 @@ i:hover{
     color:#8B48BF;
     cursor: pointer;
 }
-
+H2:hover{
+    color:#8B48BF;
+    cursor: pointer;
+}
 input:focus{
     color:#8B48BF;
 }
@@ -159,12 +166,18 @@ main{
     
 }
 
-.img-producto{
+.img-producto {
 width:75%;
 margin-left: auto;
 margin-right: auto;
 display: block;
+ box-shadow: 0 1px 2px rgb(116 5 126 / 15%);
+ transition: box-shadow 0.3s ease-in-out;
+ border-radius: 10%;
 }
+.section-articulos article {
+    box-shadow: 0 1px 2px rgb(116 5 126 / 15%);
+    transition: box-shadow 0.3s ease-in-out;}
 
 .section1-div2{
     width: 50%;
@@ -221,7 +234,7 @@ display: block;
 }
 
 .descripcion{
-    margin: 5% 5% 5% 5%;
+    margin: 5% 52% 5% 6%;
     text-align: justify;
     background-color: rgb(139 72 191 / 50%);;
 }

@@ -22,14 +22,18 @@
 
                 <div class="detalle">
                     <h1 class="titulo-producto"> <%= producto.nombre_producto %></h1>
-                    <p>Categoría:  <%= producto.id_categoria_producto %></p>
+                    <p>Categoría: Metaverso  <%= producto.id_categoria_producto %></p>
                 </div>
 
                 <div class="precio">
-                    <p class="top-venta"> Mayor venta : <%= producto.unidad_token_precio_actual%> USD</p>
+                    <p class="top-venta"> Mayor venta : <%= producto.unidad_token_precio_actual%> ETH</p>
                     <p> Descuento:  <%= producto.descuento_producto %> %</p>
                 </div>
-
+                <section class="descripcion">
+                    <p>
+                        <%= producto.descripcion_producto %>
+                </section>
+        
                 <div class="div-button-box">
                     <a class="button-div" href="/carrito"><button class="button-div"> AL CARRITO</button></a>
                     <button class="button-div" type="submit">COMPRAR AHORA</button>
@@ -40,11 +44,7 @@
             </div>
         </section>
 
-        <section class="descripcion">
-            <p>
-                <%= producto.descripcion %>
-        </section>
-
+        
 
     </main>
 

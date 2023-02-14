@@ -20,6 +20,7 @@ const registroController={
     loginsql:(req,res) =>{
         db.usuario.findAll()
         .then(function(usuario){
+            console.log(req.session)
             res.render('../views/usuarios/login', {usuario});
         })
     },
@@ -48,6 +49,11 @@ const registroController={
       });
     },
     loginProcessSql: (req,res)=>{
+       // const error = validationResult(req);
+
+      //if (!error.isEmpty()) {
+        //return res.render('../views/usuarios/login', { errors: error.mapped() });
+     // }
         let userToLogin =  db.usuario.findOne({
             where: {
                 correo_usuario : req.body.correo_usuario,
@@ -68,11 +74,11 @@ const registroController={
           }
         }
         return res.render('../views/usuarios/login',{
-          errors: {
-            correo_usuario:{
-                  msg:"El mail ingresado no se encuentra registrado"
-              }
-          }
+          //errors: {
+            //correo_usuario:{
+              //    msg:"El mail ingresado no se encuentra registrado"
+              //}
+         // }
         });
     },
      loginProcessSql2: function(req,res){
@@ -86,9 +92,12 @@ const registroController={
      },
 
     profile: (req,res)=>{
-          return res.render('../views/usuarios/profile',{
-            user: req.session.userLogged
-          });
+        
+        return res.render('../views/usuarios/profile');
+        
+        
+            
+          
     },
 
     logout: (req,res)=>{
@@ -142,8 +151,17 @@ crearsql: (req,res)=>{
         res.render('../views/usuarios/registro', {usuario});
     })
 },
-storeSql: (req, res)=>{
-db.usuario.create({
+storeSql: async (req, res)=>{
+    try {
+        const error = validationResult(req);
+  
+        if (!error.isEmpty()) {
+          return res.render('../views/usuarios/registro', {
+            errors: error.mapped(),
+            old: req.body,
+          });
+        } else {
+await db.usuario.create({
     nombre_usuario: req.body.nombre_usuario,
         apellido_usuario: req.body.apellido_usuario,
         cuenta_usuario: req.body.cuenta_usuario,
@@ -158,6 +176,10 @@ db.usuario.create({
 /*res.render('../views/usuarios/login')*/
 res.redirect('/usuario/login')
 }
-}
 
+}catch (error) {
+    console.log(error);
+  }
+}
+}
 module.exports = registroController;
