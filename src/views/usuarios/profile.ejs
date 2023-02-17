@@ -23,11 +23,11 @@
         <%- include("../partials/header-productosPrincipal")  %> 
     
         <main>
-            <h2>BIENVENIDO A NFT MARKET</H2>
+            <h2>BIENVENIDO A NFT MARKET <%= user.cuenta_usuario%></H2>
             <section class="section1">
         
                 <div class="section1-div1">
-                    <img class="img-producto" src="/images/1675804640388_user.jpg" alt="imagen producto">
+                    <img class="img-producto" src="/images/<%= user.imagen_perfil %>" alt="imagen producto">
                 </div>
            
                 <div class="section1-div2">

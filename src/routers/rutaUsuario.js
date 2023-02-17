@@ -24,11 +24,11 @@ const { body } = require('express-validator');
 
 //Rutas
 router.get('/login', guestMiddleware, usuarioController.loginsql);
-router.post('/login',uploadFile.single("filename"), usuarioController.loginProcessSql)
+router.post('/login',uploadFile.single("filename"), validations.loginValidation, usuarioController.loginProcessSql)
 
 //Crear Usuario
 router.get('/registro', guestMiddleware, usuarioController.crearsql);
-router.post('/detalle', uploadFile.single("filename"), usuarioController.storeSql);
+router.post('/detalle', uploadFile.single("filename"),validations.registerValidation, usuarioController.storeSql);
 
 
 router.get('/profile/', authMiddleware, usuarioController.profile);

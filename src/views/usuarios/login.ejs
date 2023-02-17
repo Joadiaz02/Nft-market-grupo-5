@@ -41,9 +41,9 @@
             <i class="fas fa-lock lock"></i>
             <input type="password" id="contrasena_usuario" name="contrasena_usuario" placeholder="Contraseña">
             <i class="far fa-eye-slash ver"></i>   
-            <% if (locals.errors && errors.password){ %>
+            <% if (locals.errors && errors.contrasena_usuario){ %>
                 <div class="text-danger">
-                       <%= errors.password.msg %> 
+                       <%= errors.contrasena_usuario.msg %> 
                     </div> 
                     <% } %>          
         </div>

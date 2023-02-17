@@ -54,6 +54,14 @@ const registroController={
       //if (!error.isEmpty()) {
         //return res.render('../views/usuarios/login', { errors: error.mapped() });
      // }
+     const errorLogin = validationResult(req);
+  
+        if (errorLogin.errors.length>0) {
+          return res.render('../views/usuarios/login', {
+            errors: errorLogin.mapped(),
+            oldData: req.body
+          });
+        }else{
         let userToLogin =  db.usuario.findOne({
             where: {
                 correo_usuario : req.body.correo_usuario,
@@ -61,7 +69,7 @@ const registroController={
             }
         })
 
-        if (userToLogin){
+        //if (userToLogin){
           //let correctPassword = bcrypt.compareSync(req.body.contrasena_usuario, userToLogin.contrasena_usuario);
           if(userToLogin){
               delete userToLogin.contrasena_usuario;
@@ -71,8 +79,9 @@ const registroController={
               }
              // return res.render('../views/usuarios/profile');
              return res.redirect("profile")
-          }
+          //}
         }
+    }
         return res.render('../views/usuarios/login',{
           //errors: {
             //correo_usuario:{
@@ -82,6 +91,7 @@ const registroController={
         });
     },
      loginProcessSql2: function(req,res){
+        
         db.usuario.findOne({
             where: {
                 correo_usuario : req.body.correo_usuario,
@@ -93,7 +103,7 @@ const registroController={
 
     profile: (req,res)=>{
         
-        return res.render('../views/usuarios/profile');
+        return res.render('../views/usuarios/profile', { user: req.session.userLogged });
         
         
             
@@ -151,17 +161,17 @@ crearsql: (req,res)=>{
         res.render('../views/usuarios/registro', {usuario});
     })
 },
-storeSql: async (req, res)=>{
-    try {
-        const error = validationResult(req);
+storeSql:  (req, res)=>{
+    
+        const errorRegistro = validationResult(req);
   
-        if (!error.isEmpty()) {
+        if (errorRegistro.errors.length>0) {
           return res.render('../views/usuarios/registro', {
-            errors: error.mapped(),
-            old: req.body,
+            errors: errorRegistro.mapped(),
+            oldData: req.body
           });
         } else {
-await db.usuario.create({
+ db.usuario.create({
     nombre_usuario: req.body.nombre_usuario,
         apellido_usuario: req.body.apellido_usuario,
         cuenta_usuario: req.body.cuenta_usuario,
@@ -173,13 +183,14 @@ await db.usuario.create({
         contacto_usuario: req.body.contacto_usuario,
         contrasena_usuario: bcrypt.hashSync(req.body.contrasena_usuario, 10)
 })
+
+    res.redirect('/usuario/login')
+}
 /*res.render('../views/usuarios/login')*/
-res.redirect('/usuario/login')
+
 }
 
-}catch (error) {
-    console.log(error);
-  }
 }
-}
+
+
 module.exports = registroController;
