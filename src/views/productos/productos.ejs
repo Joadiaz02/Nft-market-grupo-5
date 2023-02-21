@@ -18,7 +18,14 @@
     <body>
         <%- include("../partials/header-productos")  %> 
         <main>
-            <img class ="Banner" src="/images/gato.jpg" alt="Banner">
+            <div class="slider">
+                <ul>
+            <li><img  src="/images/gato.jpg" alt="Banner"></li>
+            <li><img  src="/images/spiderman.png" alt="Banner"></li>
+            <li><img  src="/images/rockydrago.png" alt="Banner"></li>
+            <li><img  src="/images/monkeysnft2.png" alt="Banner"></li>
+        </ul>
+        </div>
             <section class="section-articulos">
                 <h3 class="Titulares">THE NFT MARKET</h3>   
                 <% producto.forEach(producto=> { %>
