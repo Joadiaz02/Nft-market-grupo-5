@@ -2,6 +2,7 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 
 product = db.producto;
+categorias = db.categorias_productos;
 
 module.exports = {
     list: async (req, res) => {
@@ -46,8 +47,56 @@ module.exports = {
                     data: product
                 }
             res.json(respuesta)
-        })}}
+        })},
+    
+        lastProduct: (req, res) => {
+            product.findAll({
+              limit: 1,
+              order: [["id", "DESC"]],
+            }).then((product) => {
+              let response = {
+                meta: {
+                  status: 200,
+                  url: "productosApi/lastProduct",
+                },
+                data: product,
+              };
+              res.json(response);
+            });
+          },
+          categoriaLista: async (req, res) => {
+            categorias.findAll()
+            .then(categorias => {
+                let respuesta = {
+                   meta: {
+                    status: 200,
+                    total: categorias.length,
+                    url: '/categorias'
+                   },
+                   data: categorias
+                }
+                res.json(respuesta)
+            })
+    },
 
+    primerosNft: (req, res) => {
+        product.findAll({
+            limit: 3,
+            order: [["id", "ASC"]],
+        })
+        .then(product => {
+            let respuesta = {
+                meta: {
+                    status : 200,
+                    total: product.length,
+                    url: '/primerosNft'
+                },
+                data: product
+            }
+                res.json(respuesta);
+            })
+      },
+}
 
 
 /*detail: async (req, res) => {

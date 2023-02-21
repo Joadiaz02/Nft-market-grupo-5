@@ -2,6 +2,7 @@
 let ejs = require('ejs');
 const express = require('express');
 const cookies = require('cookie-parser');
+const cors = require('cors');
 // ********** express () **********
 const app = express();
 const methodOverride =  require('method-override'); // Para poder usar los métodos PUT y DELETE
@@ -14,6 +15,7 @@ app.use(express.static(__dirname + '/public')); // Necesario para los archivos e
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method')); // Para poder pisar el method="POST" en el formulario por PUT y DELETE
+app.use(cors());
 
 // ************ Template Engine ************
 app.set('view engine', 'ejs');
@@ -52,7 +54,7 @@ app.use('/productosApi', apiProductosRouter);
 
 
 // ************ Creando servidor ************
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3030
 
 app.listen(PORT, () => {
     console.log('Servidor Funcionando')

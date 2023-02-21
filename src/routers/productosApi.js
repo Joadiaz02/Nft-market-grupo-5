@@ -14,6 +14,9 @@ let todosUsurios = db.usuario.findAll()*/
 //Rutas
 router.get('/', procutosController.list)
 router.get('/detalle/:id', procutosController.detail)
+router.get('/lastProduct', procutosController.lastProduct)
+router.get('/categorias', procutosController.categoriaLista)
+router.get('/primerosNft', procutosController.primerosNft)
 
 
 
