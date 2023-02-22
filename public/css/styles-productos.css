@@ -89,7 +89,7 @@ header ul li{
 
     margin: 2rem;
     justify-content: space-between;
-
+    list-style-type: none;
 }
 
 header .botonesIncioRegistro{
